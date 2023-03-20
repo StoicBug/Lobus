@@ -1,9 +1,9 @@
 <template>
-    <div class="w-4/5 mx-auto mt-10">
+    <div class="lg:w-4/5 container mx-auto mt-10 ">
         <div
             class="flex items-center -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap dark:bg-gray-800 dark:text-gray-100 text-white">
             <a rel="noopener noreferrer" href="#"
-                class="flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-400 bg-white text-silver ml-16 rounded-t-lg">
+                class="flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-400 bg-white text-silver ml-4 md:ml-16 rounded-t-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
@@ -11,7 +11,7 @@
                 <span>Aller-Simple</span>
             </a>
             <a rel="noopener noreferrer" href="#"
-                class="flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-50 bg-secondary ml-4 rounded-t-lg">
+                class="flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-50 bg-secondary md:ml-4 rounded-t-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -20,7 +20,7 @@
                 <span>Aller-Retour</span>
             </a>
             <a rel="noopener noreferrer" href="#"
-                class="flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-400 bg-secondary ml-4 rounded-t-lg">
+                class="flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-400 bg-secondary md:ml-4 rounded-t-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                     <polygon
@@ -30,7 +30,7 @@
                 <span>Circuit</span>
             </a>
             <a rel="noopener noreferrer" href="#"
-                class="flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-400 bg-secondary ml-4 rounded-t-lg">
+                class="flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-400 bg-secondary md:ml-4 rounded-t-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                     <circle cx="12" cy="12" r="10"></circle>
@@ -43,7 +43,7 @@
 
             <img src="../assets/corner_zelij.png" alt="" class="absolute top-0 right-0">
             <form action="">
-                <div class="grid grid-cols-6 gap-1 text-silver">
+                <div class="grid lg:grid-cols-6 md:grid-cols-4 gap-1 text-silver">
                     <div class="col-span-2">
                         <label for="" class="">Place de depart</label>
                         <br>
@@ -82,9 +82,9 @@
                     <div class="col-span-2">
                         <label for="">Ma date de départ</label>
                         <br>
-                        <input type="date" class="py-1 px-6 border border-gray rounded-lg mt-2 mb-6" />
+                        <input type="date" class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between" />
                         <br>
-                        <label for="" class="-">Voyageurs</label>
+                        <label for="" class="">Voyageurs</label>
                         <br>
                         <div class="relative focus-within:text-gray-400 mt-2">
                             <span class="absolute text-silver inset-y-0 left-0 flex items-center justify-between pl-2">
@@ -201,5 +201,13 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.mx-input {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+.mx-icon-calendar {
+    left: 8px
 }
 </style>
