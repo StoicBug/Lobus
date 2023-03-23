@@ -4,7 +4,7 @@
             <p class="text-primary">Your best choice</p>
             <h1 class="text-2xl font-semibold ">- 3 simple steps to plan your trip -</h1>
         </div>
-        <div class="grid grid-cols-6 pt-10">
+        <div class="grid grid-cols-6 pt-10 gap-4">
             <div class="col-start-2 col-span-4 md:col-start-2 md:col-span-2">
                 <img src="../assets/BoxModel.png" alt="">
             </div>

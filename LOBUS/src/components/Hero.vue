@@ -1,8 +1,8 @@
 <template>
     <section class="bg-hero-pattern h-full bg-cover bg-no-repeat bg-primary pb-10 pt-10 ">
         <div class="blurbox pl-10 pr-5 lg:w-5/6 mx-auto pt-12 pb-36 text-white container">
-            <h1 class=" text-3xl font-bold w-4/6">Réservez Votre Voiture, Minibus, ou Autocar avec Lobus</h1>
-            <p class="pt-2 w-2/3">Ne vous contentez pas de bus bondés ou de taxis peu fiables - choisissez Lobus
+            <h1 class=" text-3xl font-bold md:w-4/6">Réservez Votre Voiture, Minibus, ou Autocar avec Lobus</h1>
+            <p class="pt-2 md:w-2/3">Ne vous contentez pas de bus bondés ou de taxis peu fiables - choisissez Lobus
                 et découvrez la commodité et le luxe du transport privé. Réservez votre trajet dès aujourd'hui et
                 laissez-nous nous occuper du reste !</p>
         </div>
