@@ -4,6 +4,7 @@ import {
 } from 'vue-router';
 import AllerSimple from '../components/HeroForms/AllerSimple.vue'
 import AllerRetour from '../components/HeroForms/AllerRetour.vue'
+import Etape1 from '../views/confirmation/Etape1.vue'
 
 const routes = [{
     path: '/',
@@ -12,10 +13,14 @@ const routes = [{
     children: [{
         path: '',
         component: AllerSimple
-    },{
+    }, {
         path: 'aller-retour',
         component: AllerRetour
     }]
+}, {
+    path: '/etape1',
+    name: 'etape1',
+    component: Etape1
 }, ]
 
 const router = createRouter({

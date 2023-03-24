@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
-    './src/pages/**/*.{html,js,vue}',
-    './src/components/**/*.{html,js,vue}',
-    './src/*.{html,js,vue}',
+    './src/**/*.{html,js,vue}',
   ],
   theme: {
     extend: {
       backgroundImage:{
         'hero-pattern': "url('/src/assets/zelij.png')",
+        'steps-bg': "url('/LOBUS/src/assets/bg-steps.png')"
       },
       fontFamily:{
         'Myfont': ['Poppins', 'serif']
@@ -19,7 +19,8 @@ module.exports = {
       secondary: '#083B81',
       silver: '#394F63',
       white: '#fff',
-      gray: '#969CA3'
+      gray: '#969CA3',
+      
     }
   },
   plugins: [],
