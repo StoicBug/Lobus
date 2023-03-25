@@ -161,10 +161,9 @@
         </div>
       </div>
       <div class="px-5 py-10">
-        <button class="text-white bg-primary px-6 py-3 rounded-md mx-3">
-          Etape Suivante
-        </button>
-        <button class="underline mx-3">Retour a l’etape precedante</button>
+        
+        <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2">Etape Suivante</RouterLink>
+        <RouterLink  class="underline mx-3" to="/">Retour a l’etape precedante</RouterLink>
       </div>
     </div>
   </div>

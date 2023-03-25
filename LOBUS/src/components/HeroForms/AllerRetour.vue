@@ -37,7 +37,7 @@
             <input
               type="text"
               name="q"
-              class="py-2 text-sm text-silver bg-gray-900 pl-10 focus:outline-none focus:text-gray-900 border border-gray rounded-lg"
+              class="py-2 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Place de depart"
               autocomplete="off"
             />
@@ -72,7 +72,7 @@
             <input
               type="text"
               name="q"
-              class="py-2 text-sm text-silver bg-gray-900 pl-10 focus:outline-none focus:text-gray-900 border border-gray rounded-lg"
+              class="py-2 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Place d’arrivée"
               autocomplete="off"
             />
@@ -118,7 +118,7 @@
             <input
               type="text"
               name="q"
-              class="py-2 text-sm text-silver bg-gray-900 pl-10 focus:outline-none focus:text-gray-900 border border-gray rounded-lg"
+              class="py-2 text-sm text-silver  pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Adulte(s)"
               autocomplete="off"
             />
@@ -126,9 +126,7 @@
         </div>
       </div>
       <p class="text-end">
-        <button class="px-6 py-2 rounded-md bg-primary text-silver font-medium">
-          Suivant
-        </button>
+        <RouterLink class="px-6 py-2 rounded-md bg-primary text-white font-medium" to="etape1">Suivant</RouterLink>
       </p>
     </form>
   </div>

@@ -1,25 +1,69 @@
 <template>
-    <nav class="shadow-sm ">
-      <div class="px-8 py-6 flex justify-between items-center container mx-auto">
-
-        <h1 class="text-3xl font-extrabold italic">LOB<span class="text-orange-600">U</span>S</h1>
-        <p>
-            <button class="font-medium text-silver">Inscription Transpoeteur</button>
-            <button class="ml-4 bg-primary px-4 py-2 rounded-lg text-silver font-medium shadow-sm">Se connecter</button>
-        </p>
-      </div>
-    </nav>
+  <nav class="shadow-sm">
+    <div class="px-8 py-6 flex justify-between items-center container mx-auto">
+      <RouterLink class="text-3xl font-extrabold italic" to="/">
+        LOB<span class="text-orange-600">U</span>S
+      </RouterLink>
+      <span
+        class="md:hidden absolute right-6 top-6 cursor-pointer text-4xl"
+        @click="toggle()"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </span>
+      <ul
+        class="md:flex md:w-auto md:static absolute md:px-0 md:pb-0 md:py-0 md:shadow-none pb-10 top-14 px-2 w-full duration-700 ease-in bg-white shadow-lg py-10 justify-center items-center z-30"
+        :class="[open ? 'left-0' : 'left-[-100%]']"
+      >
+        <li class="text-center">
+          <button class="font-medium text-silver">
+            Inscription Transpoeteur
+          </button>
+        </li>
+        <li class="text-center">
+          <button
+            class="ml-4 bg-primary px-4 py-2 rounded-lg text-silver font-medium shadow-sm"
+          >
+            Se connecter
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
-  data() {
+  setup() {
+    let open = ref(false);
+
+    const toggle = () => {
+      open.value = !open.value;
+    };
+
     return {
-    }
-  }
-}
+      open,
+      toggle,
+    };
+  },
+
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

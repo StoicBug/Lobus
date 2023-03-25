@@ -1,0 +1,73 @@
+<template>
+  <NavBar />
+  <div class="container mx-auto bg-steps-bg py-10">
+    <StepsHeader />
+    <div class="shadow-lg">
+      <div class="w-auto mx-auto text-center border-silver">
+        <button
+          class="px-6 py-2 border-r-2 border-y-2 border-l-2 border-silver"
+          :class="classObject()"
+          @click="toggle()"
+        >
+          Particulier 
+        </button>
+        <button
+          class="px-6 py-2 border-silver text-silver border-r-2 border-y-2"
+          :class="{
+            'bg-primary': !checked,
+            'text-white': !checked,
+            'border-y-2': !checked,
+            'text-silver': !checked,
+          }"
+          @click="toggle()"
+        >
+          Société 
+        </button>
+      </div>
+      <RouterView :checked="checked"></RouterView>
+
+      <div class="px-5 py-10">
+        <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2">Etape Suivante</RouterLink>
+        <RouterLink  class="underline mx-3" to="/etape1">Retour a l’etape precedante</RouterLink>
+      </div>
+      <p class="px-10 pb-10" >Vous n’avez pas de compte chez Groupito ? <RouterLink to="etape2/4" class=" text-primary text-lg font-medium underline cursor-pointer">Indiquez vos coordonnées</RouterLink></p>
+    </div>
+  </div>
+  <Footer />
+</template>
+
+<script>
+import NavBar from "../../components/NavBar.vue";
+import StepsHeader from "../../components/steps/StepsHeader.vue";
+import Footer from "../../components/Footer.vue";
+import Particulier from "../../components/steps/Particulier.vue";
+import Societe from "../../components/steps/Societe.vue";
+import ValiderEtContinue from "../../components/steps/ValiderEtContinue.vue";
+
+export default {
+  components: { NavBar, StepsHeader, Footer, Particulier,Societe,ValiderEtContinue },
+  data() {
+    return {
+      checked: true,
+    };
+  },
+  methods: {
+    toggle() {
+      //true id for Particulier, false for Société
+      this.checked = !this.checked;
+      console.log(this.checked);
+    },
+    classObject() {
+      return {
+        "bg-primary": this.checked,
+        "text-white": this.checked,
+        "border-y-2": this.checked,
+        "text-silver": this.checked,
+      };
+    },
+  },
+};
+</script>
+
+<style scoped>
+</style>
