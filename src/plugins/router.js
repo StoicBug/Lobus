@@ -36,7 +36,7 @@ const routes = [
       },
       {
         path: "4",
-        component: () => import("../components/steps/Login.vue"),
+        component: () => import("../components/steps/LogIn.vue"),
       },
     ],
   }
