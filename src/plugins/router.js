@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import AllerSimple from "../components/HeroForms/AllerSimple.vue";
 import AllerRetour from "../components/HeroForms/AllerRetour.vue";
 import Etape1 from "../views/confirmation/Etape1.vue";
-import LogIn from "../components/steps/Login.vue";
 import ValiderEtContinue from "../components/steps/ValiderEtContinue.vue";
 
 const routes = [
@@ -37,7 +36,7 @@ const routes = [
       },
       {
         path: "4",
-        component: LogIn,
+        component: () => import("../components/steps/Login.vue"),
       },
     ],
   }

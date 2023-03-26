@@ -8,8 +8,8 @@ module.exports = {
     extend: {
       backgroundImage:{
         'hero-pattern': "url('/src/assets/zelij.png')",
-        'steps-bg': "url('/LOBUS/src/assets/bg-steps.png')",
-		'landing-bg': "url('./src/assets/landing-bg.png')",
+        'steps-bg': "url('/src/assets/bg-steps.png')",
+		'landing-bg': "url('/src/assets/landing-bg.png')",
 
       },
       fontFamily:{
