@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white p-10 rounded-md relative">
     <img
-      src="../assets/corner_zelij.png"
+      src="../../assets/corner_zelij.png"
       alt=""
       class="absolute top-0 right-0"
     />

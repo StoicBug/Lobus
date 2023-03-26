@@ -30,7 +30,7 @@
         <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2">Etape Suivante</RouterLink>
         <RouterLink  class="underline mx-3" to="/etape1">Retour a l’etape precedante</RouterLink>
       </div>
-      <p class="px-10 pb-10" >Vous n’avez pas de compte chez Groupito ? <RouterLink to="etape2/4" class=" text-primary text-lg font-medium underline cursor-pointer">Indiquez vos coordonnées</RouterLink></p>
+      <p class="px-10 pb-10" >Vous n’avez pas de compte chez Groupito ? <RouterLink to="/etape2/4" class=" text-primary text-lg font-medium underline cursor-pointer">Indiquez vos coordonnées</RouterLink></p>
     </div>
   </div>
   <Footer />

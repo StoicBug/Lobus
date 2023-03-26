@@ -1,5 +1,8 @@
-<template>
-    <section class="container mx-auto pt-10">
+<template >
+    <div class="bg-landing-bg bg-no-repeat bg-cover bg-opacity-40">
+
+    
+    <section class="container mx-auto pt-10" >
         <div class="text-center">
             <p class="text-primary">Your best choice</p>
             <h1 class="text-2xl font-semibold ">- 3 simple steps to plan your trip -</h1>
@@ -32,6 +35,7 @@
             </div>
         </div>
     </section>
+</div>
 </template>
 
 <script>
