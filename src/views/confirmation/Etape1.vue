@@ -2,7 +2,7 @@
   <NavBar />
   <div class="container mx-auto py-10">
     <StepsHeader />
-    <div class="shadow-lg">
+    <div class="shadow-lg bg-landing-bg bg-no-repeat bg-cover bg-opacity-20">
       <div class="grid grid-cols-3 gap-4 w-full py-10 text-center">
         <div class="col-span-1 text-lg font-medium">
           Estimation basse <br />

@@ -33,7 +33,7 @@
         </li>
         <li class="text-center">
           <button
-            class="ml-4 bg-primary px-4 py-2 rounded-lg text-silver font-medium shadow-sm"
+            class="ml-4 bg-primary px-4 py-2 rounded-lg text-white font-medium shadow-sm"
           >
             Se connecter
           </button>

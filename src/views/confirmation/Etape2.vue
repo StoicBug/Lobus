@@ -1,36 +1,33 @@
 <template>
   <NavBar />
-  <div class="container mx-auto bg-steps-bg py-10">
+  <div class="container mx-auto py-10">
     <StepsHeader />
-    <div class="shadow-lg">
-      <div class="w-auto mx-auto text-center border-silver">
-        <button
-          class="px-6 py-2 border-r-2 border-y-2 border-l-2 border-silver"
-          :class="classObject()"
-          @click="toggle()"
-        >
-          Particulier 
-        </button>
-        <button
-          class="px-6 py-2 border-silver text-silver border-r-2 border-y-2"
-          :class="{
+    <div class="bg-landing-bg bg-cover">
+      <div class="shadow-lg">
+        <div class="w-auto mx-auto text-center border-silver">
+          <button class="px-6 py-2 border-r-2 border-y-2 border-l-2 border-silver" :class="classObject()"
+            @click="toggle()">
+            Particulier 
+          </button>
+          <button class="px-6 py-2 border-silver text-silver border-r-2 border-y-2" :class="{
             'bg-primary': !checked,
             'text-white': !checked,
             'border-y-2': !checked,
             'text-silver': !checked,
-          }"
-          @click="toggle()"
-        >
-          Société 
-        </button>
-      </div>
-      <RouterView :checked="checked"></RouterView>
+          }" @click="toggle()">
+            Société 
+          </button>
+        </div>
+        <RouterView :checked="checked"></RouterView>
 
-      <div class="px-5 py-10">
-        <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2">Etape Suivante</RouterLink>
-        <RouterLink  class="underline mx-3" to="/etape1">Retour a l’etape precedante</RouterLink>
+        <div class="px-5 py-10">
+          <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2">Etape Suivante</RouterLink>
+          <RouterLink class="underline mx-3" to="/etape1">Retour a l’etape precedante</RouterLink>
+        </div>
+        <p class="px-10 pb-10" @click="getpath">Vous n’avez pas de compte chez Groupito ? <RouterLink to="/etape2/4"
+            class=" text-primary text-lg font-medium underline cursor-pointer">Indiquez vos coordonnées</RouterLink>
+        </p>
       </div>
-      <p class="px-10 pb-10" >Vous n’avez pas de compte chez Groupito ? <RouterLink to="/etape2/4" class=" text-primary text-lg font-medium underline cursor-pointer">Indiquez vos coordonnées</RouterLink></p>
     </div>
   </div>
   <Footer />
@@ -44,8 +41,14 @@ import Particulier from "../../components/steps/Particulier.vue";
 import Societe from "../../components/steps/Societe.vue";
 import ValiderEtContinue from "../../components/steps/ValiderEtContinue.vue";
 
+
+import {useRoute} from 'vue-router'
+import {computed} from 'vue'
+
+
 export default {
-  components: { NavBar, StepsHeader, Footer, Particulier,Societe,ValiderEtContinue },
+
+  components: { NavBar, StepsHeader, Footer, Particulier, Societe, ValiderEtContinue },
   data() {
     return {
       checked: true,
@@ -66,8 +69,14 @@ export default {
       };
     },
   },
+  setup() {
+    const path = useRoute()
+    console.log(path.path)
+    return {
+      path: computed(() => path.path),
+    }
+  },
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
