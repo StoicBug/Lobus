@@ -1,6 +1,6 @@
 <template>
   <NavBar />
-  <div class="container mx-auto bg-steps-bg py-10">
+  <div class="container mx-auto py-10">
     <StepsHeader />
     <div class="shadow-lg">
       <div class="grid grid-cols-3 gap-4 w-full py-10 text-center">

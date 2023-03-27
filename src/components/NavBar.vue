@@ -23,8 +23,8 @@
         </svg>
       </span>
       <ul
-        class="md:flex md:w-auto md:static absolute md:px-0 md:pb-0 md:py-0 md:shadow-none pb-10 top-14 px-2 w-full duration-700 ease-in bg-white shadow-lg py-10 justify-center items-center z-30"
-        :class="[open ? 'left-0' : 'left-[-100%]']"
+        class="md:flex md:w-auto md:static absolute md:px-0 md:pb-0 md:py-0 md:shadow-none pb-10 top-14 px-2 w-full duration-500 ease-out bg-white shadow-lg py-10 justify-center items-center z-30 overflow-y-hidden"
+        :class="[open ? 'right-0' : 'right-[-100%] hidden']"
       >
         <li class="text-center">
           <button class="font-medium text-silver">

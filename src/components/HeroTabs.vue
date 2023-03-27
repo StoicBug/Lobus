@@ -1,7 +1,7 @@
 <template>
     <div class="lg:w-4/5 container mx-auto mt-10 ">
         <div
-            class="flex items-center -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap  text-white">
+            class="flex items-center -ml-4 overflow-x-auto overflow-y-hidden flex-nowrap  text-white">
             <RouterLink rel="noopener noreferrer" to="/"
                 class="flex items-center flex-shrink-0 px-2 md:px-5 py-3 space-x-2 bg-secondary ml-6 md:ml-16 rounded-t-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"

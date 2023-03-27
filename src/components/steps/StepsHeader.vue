@@ -1,22 +1,45 @@
 <template>
-<ul class="step-wizard-list">
-      <li class="step-wizard-item">
-        <span class="progress-count">1</span>
-        <span class="progress-label">Validation</span>
+<div class="my-10 w-11/12 mx-auto">
+  <h2 class="sr-only">Steps</h2>
+
+  <div
+    class="relative after:absolute after:inset-x-0 after:top-1/2 after:block after:h-0.5 after:-translate-y-1/2 after:rounded-lg after:bg-gray-100"
+  >
+    <ol
+      class="relative z-10 flex justify-between text-sm font-medium text-gray-500"
+    >
+      <li class="flex items-center gap-2 bg-white p-2">
+        <span
+          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6"
+        >
+          1
+        </span>
+
+        <span class="hidden sm:block"> Details </span>
       </li>
-      <li class="step-wizard-item current-item">
-        <span class="progress-count">2</span>
-        <span class="progress-label">Valider et Continue</span>
+
+      <li class="flex items-center gap-2 bg-white p-2">
+        <span
+          class="h-6 w-6 rounded-full bg-secondary text-center text-[10px] font-bold leading-6 text-white"
+        >
+          2
+        </span>
+
+        <span class="hidden sm:block"> Address </span>
       </li>
-      <li class="step-wizard-item">
-        <span class="progress-count">3</span>
-        <span class="progress-label">Terminer</span>
+
+      <li class="flex items-center gap-2 bg-white p-2">
+        <span
+          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6"
+        >
+          3
+        </span>
+
+        <span class="hidden sm:block"> Payment </span>
       </li>
-      <li class="step-wizard-item">
-        <span class="progress-count">4</span>
-        <span class="progress-label">Success</span>
-      </li>
-    </ul>
+    </ol>
+  </div>
+</div>
     
 </template>
 
