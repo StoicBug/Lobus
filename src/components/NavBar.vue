@@ -28,7 +28,7 @@
       >
         <li class="text-center">
           <button class="font-medium text-silver">
-            Inscription Transpoeteur
+            <RouterLink to="/login-transporteur">Inscription Transporteur</RouterLink>
           </button>
         </li>
         <li class="text-center">

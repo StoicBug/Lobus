@@ -36,7 +36,7 @@
               placeholder="Place d’arrivée" autocomplete="off" />
           </div>
         </div>
-        <div class="col-span-2">
+        <div class="col-span-2 mt-4 md:mt-0">
           <label for="">Aller</label>
           <br />
           <input type="date" class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between" />
@@ -45,7 +45,7 @@
           <br />
           <input type="time" class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between" />
         </div>
-        <div class="col-span-2">
+        <div class="col-span-2 mt-4 md:mt-0">
           <label for="" class="">Passagers </label>
           <br />
           <div class="relative focus-within:text-gray-400 mt-2">
@@ -76,7 +76,7 @@
               placeholder="Adulte(s)" autocomplete="off" />
           </div>
         </div>
-        <div class="col-span-2 pt-2">
+        <div class="col-span-2 my-4 ">
           <label for="" class="">N° vol </label>
           <br />
           <div class="relative focus-within:text-gray-400 mt-2">

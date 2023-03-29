@@ -15,7 +15,7 @@
               1
             </span>
     
-            <span class="hidden sm:block"> Details </span>
+            <span class="hidden sm:block"> Information </span>
           </li>
     
           <li class="flex items-center gap-2 bg-white p-2">
@@ -25,7 +25,7 @@
               2
             </span>
     
-            <span class="hidden sm:block"> Address </span>
+            <span class="hidden sm:block"> Valider </span>
           </li>
     
           <li class="flex items-center gap-2 bg-white p-2">
@@ -35,7 +35,7 @@
               3
             </span>
     
-            <span class="hidden sm:block"> Payment </span>
+            <span class="hidden sm:block"> Valider et Continue </span>
           </li>
         </ol>
       </div>

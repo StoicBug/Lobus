@@ -78,7 +78,7 @@
             />
           </div>
         </div>
-        <div class="col-span-2">
+        <div class="col-span-2 mt-4 md:mt-0">
           <label for="">Aller</label>
           <br />
           <input
@@ -93,7 +93,7 @@
             class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between"
           />
         </div>
-        <div class="col-span-2">
+        <div class="col-span-2 mt-4 md:mt-0">
           <label for="">Aller à</label>
           <br />
           <input
@@ -108,7 +108,7 @@
             class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between"
           />
         </div>
-        <div class="col-span-2 pt-2">
+        <div class="col-span-2 pt-2 my-4 ">
             <label for="" class="">Voyageurs</label>
           <br />
           <div class="relative focus-within:text-gray-400 mt-2">
@@ -141,7 +141,7 @@
         </div>
       </div>
       <p class="text-end">
-        <RouterLink class="px-6 py-2 rounded-md bg-primary text-white font-medium" to="/aller-retour/etape1">Suivant</RouterLink>
+        <RouterLink class="px-6 py-2 rounded-md bg-primary text-white font-medium" to="/circuit/etape1">Suivant</RouterLink>
       </p>
     </form>
   </div>

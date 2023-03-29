@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto mb-10">
     <div class="text-center pt-10">
       <p class="text-primary">Your best choice</p>
       <h1 class="text-2xl font-semibold">

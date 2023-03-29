@@ -1,7 +1,7 @@
 <template>
   <form novalidate="" action="" class="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
     <div class="grid grid-cols-6 gap-6 col-span-full lg:col-span-3 p-10">
-      <div class="col-span-full sm:col-span-3">
+      <div class="col-span-full sm:col-span-4 sm:col-start-2">
         <div class="relative focus-within:text-gray-400 mt-2">
           <span class="absolute text-silver inset-y-0 left-0 flex items-center justify-between pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -15,7 +15,7 @@
             placeholder="Prenom" autocomplete="off" />
         </div>
       </div>
-      <div class="col-span-full sm:col-span-3">
+      <div class="col-span-full sm:col-span-4 sm:col-start-2">
         <div class="relative focus-within:text-gray-400 mt-2">
           <span class="absolute text-silver inset-y-0 left-0 flex items-center justify-between pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -29,7 +29,7 @@
             placeholder="Nom" autocomplete="off" />
         </div>
       </div>
-      <div class="col-span-full sm:col-span-3">
+      <div class="col-span-full sm:col-span-4 sm:col-start-2">
         <div class="relative focus-within:text-gray-400 mt-2">
           <span class="absolute text-silver inset-y-0 left-0 flex items-center justify-between pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -43,7 +43,7 @@
             placeholder="Email" autocomplete="off" />
         </div>
       </div>
-      <div class="col-span-full sm:col-span-3 sm:col-start-1">
+      <div class="col-span-full sm:col-span-4 sm:col-start-2">
         <div class="relative focus-within:text-gray-400 mt-2 mb-6">
           <span class="absolute text-silver inset-y-0 left-0 flex items-center justify-between pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -57,7 +57,7 @@
             placeholder="Password" autocomplete="off" />
         </div>
 
-        <div class="relative focus-within:text-gray-400 mt-2">
+        <div class="relative focus-within:text-gray-400 mt-2 ">
           <span class="absolute text-silver inset-y-0 left-0 flex items-center justify-between pl-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6">
@@ -70,7 +70,7 @@
             placeholder="Confirm Password" autocomplete="off" />
         </div>
       </div>
-      <div class="col-span-full sm:col-span-2 sm:col-start-1">
+      <div class="col-span-full sm:col-span-4 sm:col-start-2">
         <div>
           <label for="" class="mr-2">Acceptation des règles générale</label>
           <br />

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-secondary relative mt-10">
+    <div class="bg-secondary relative">
         <div class="container mx-auto  text-white">
             <img src="../assets/footer-bottom-right-zelij.png" alt="" class="bottom-0 right-0 absolute opacity-50 lg:opacity-100">
             <img src="../assets/footer-left-zelij.png" alt="" class="top-0 left-0 absolute opacity-50 lg:opacity-100">
