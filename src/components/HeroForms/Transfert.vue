@@ -45,7 +45,7 @@
           <br />
           <input type="time" class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between" />
         </div>
-        <div class="col-span-2 mt-4 md:mt-0">
+        <div class="col-span-2 mt-4 lg:mt-0">
           <label for="" class="">Passagers </label>
           <br />
           <div class="relative focus-within:text-gray-400 mt-2">
