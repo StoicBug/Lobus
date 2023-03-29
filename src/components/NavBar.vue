@@ -35,7 +35,8 @@
           <button
             class="ml-4 bg-primary px-4 py-2 rounded-lg text-white font-medium shadow-sm"
           >
-            Se connecter
+            <RouterLink to="/login">Se connecter</RouterLink>
+            
           </button>
         </li>
       </ul>

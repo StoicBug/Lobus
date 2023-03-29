@@ -35,11 +35,11 @@
 
 <script>
 import NavBar from "../../components/NavBar.vue";
-import StepsHeader from "../../components/steps/StepsHeader.vue";
+import StepsHeader from "../../components/AllerSimple/StepsHeader.vue";
 import Footer from "../../components/Footer.vue";
-import Particulier from "../../components/steps/Particulier.vue";
-import Societe from "../../components/steps/Societe.vue";
-import ValiderEtContinue from "../../components/steps/ValiderEtContinue.vue";
+import Particulier from "../../components/AllerSimple/Particulier.vue";
+import Societe from "../../components/AllerSimple/Societe.vue";
+import ValiderEtContinue from "../../components/AllerSimple/ValiderEtContinue.vue";
 
 
 import {useRoute} from 'vue-router'
