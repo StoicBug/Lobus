@@ -70,7 +70,7 @@ const routes = [
     children: [
       {
         path: "",
-        component: ValiderEtContinue,
+        component: ()=> import("../components/AllerRetour/ValiderEtContinue.vue"),
       },
       {
         path: "4",

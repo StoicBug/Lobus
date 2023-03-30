@@ -189,7 +189,6 @@ export default {
     const equipements = ref([]);
 
     const handleSubmit = () => {
-      console.log(motif.value)
       allerSimple.setEquipements(equipements.value);
       allerSimple.setMotif(motif.value);
       allerSimple.setBagages(checkedBagage.value);
