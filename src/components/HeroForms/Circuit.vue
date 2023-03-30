@@ -39,6 +39,7 @@
               name="q"
               class="py-2 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Place de depart"
+              v-model="placeDeDepart"
               autocomplete="off"
             />
           </div>
@@ -74,6 +75,7 @@
               name="q"
               class="py-2 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Place d’arrivée"
+              v-model="placeDArrivee"
               autocomplete="off"
             />
           </div>
@@ -83,6 +85,7 @@
           <br />
           <input
             type="date"
+            v-model="dateDeDepart"
             class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between"
           />
           <br />
@@ -90,6 +93,7 @@
           <br />
           <input
             type="date"
+            v-model="dateDeRetour"
             class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between"
           />
         </div>
@@ -98,6 +102,7 @@
           <br />
           <input
             type="time"
+            v-model="heureDeDepart"
             class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between"
           />
           <br />
@@ -105,6 +110,7 @@
           <br />
           <input
             type="time"
+            v-model="heureDeRetour"
             class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between"
           />
         </div>
@@ -135,18 +141,61 @@
               name="q"
               class="py-2 text-sm text-silver  pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Adulte(s)"
+              v-model="voyageurs" 
               autocomplete="off"
             />
           </div>
         </div>
       </div>
       <p class="text-end">
-        <RouterLink class="px-6 py-2 rounded-md bg-primary text-white font-medium" to="/circuit/etape1">Suivant</RouterLink>
+        <RouterLink class="px-6 py-2 rounded-md bg-primary text-white font-medium" to="/circuit/etape1" @click="submit">Suivant</RouterLink>
       </p>
     </form>
   </div>
 </template>
 
-<script></script>
+<script>
+
+import { ref } from "vue"
+import {useCircuit} from "../../stores/Circuit"
+
+  export default {
+      name: "Circuit",
+      setup() {
+
+        const circuit = useCircuit()
+
+        const placeDeDepart = ref('')
+        const placeDArrivee = ref('')
+        const dateDeDepart = ref('')
+        const dateDeRetour = ref('')
+        const heureDeDepart = ref('')
+        const heureDeRetour = ref('')
+        const voyageurs = ref()
+
+        const submit = () => {
+          circuit.setPlaceDeDepart(placeDeDepart.value)
+          circuit.setPlaceDArrivee(placeDArrivee.value)
+          circuit.setDateDeDepart(dateDeDepart.value)
+          circuit.setDateDeRetour(dateDeRetour.value)
+          circuit.setHeureDeDepart(heureDeDepart.value)
+          circuit.setHeureDeRetour(heureDeRetour.value)
+          circuit.setVoyageurs(voyageurs.value)
+        }
+
+          return {
+            placeDeDepart,
+            placeDArrivee,
+            dateDeDepart,
+            dateDeRetour,
+            heureDeDepart,
+            heureDeRetour,
+            voyageurs,
+            submit
+          }
+      }
+  }
+
+</script>
 
 <style scoped></style>

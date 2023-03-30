@@ -134,7 +134,7 @@ export default{
     const isAgree = ref(false);
 
     const submit = () => {
-      allerSimple.regiterSocite(prenom.value, nom.value, denomination.value, ice.value, email.value, password.value, passwordConfirm.value, isAgree.value)
+      allerSimple.registerSociete(prenom.value, nom.value, denomination.value, ice.value, email.value, password.value, passwordConfirm.value, isAgree.value)
     }
 
     return {

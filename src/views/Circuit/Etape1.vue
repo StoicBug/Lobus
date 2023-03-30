@@ -36,42 +36,42 @@
               <div class="col-span-2">
                 <label for="" class="mr-2">Valise classique </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="valiseClassique" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Grande valise </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="grandeValise"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Bagage volumineux</label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="bagaeVolumineux"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Matérielle de surf </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="materialSurf"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Matérielle de golf</label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="materialGolf"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Pas de bagage </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="pasBagae" />
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -86,7 +86,7 @@
               <div class="col-span-2">
                 <label for="" class="mr-2">Déplacement sportif </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="radio" name="motif" v-model="motif" value="deplacementSportif" />
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -94,21 +94,21 @@
                 <label for="" class="mr-2">Déplacement d’entreprise </label>
                 <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="radio" name="motif" v-model="motif" value="deplacementEntre" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Mariage ou cérémonie</label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="radio" name="motif" v-model="motif" value="mariageCer" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Group d’étudiants</label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="radio" name="motif" v-model="motif" value="groupEtudiant"/>
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -116,7 +116,7 @@
                 <label for="" class="mr-2">Group de touristes résidant</label>
                 <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="radio" name="motif" v-model="motif" value="groupTouristRes" />
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -124,7 +124,7 @@
                 <label for="" class="mr-2">Group de touriste non résidant</label>
                 <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="radio" name="motif" v-model="motif" value="groupTourNonRes" />
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -139,21 +139,21 @@
               <div class="col-span-2">
                 <label for="" class="mr-2">Micro audio </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" value="microAudio" v-model="equipements"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
-                <label for="" class="mr-2">Siege bébé </label> <br />
+                <label for="" class="mr-2" >Siege bébé </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" value="siegeBebe" v-model="equipements" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Glacié</label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" value="glacie" v-model="equipements"/>
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -170,11 +170,11 @@
                   d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
               </svg>
             </span>
-            <textarea class="py-3 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg w-full"> Si vous souhaitez ajouter des informations supplémentaires sur votre voyage, telles que des demandes spéciales ou des préférences de voyage, veuillez remplir cette section facultative.</textarea>
+            <textarea class="py-3 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg w-full" v-model="detailDeVoyage"> Si vous souhaitez ajouter des informations supplémentaires sur votre voyage, telles que des demandes spéciales ou des préférences de voyage, veuillez remplir cette section facultative.</textarea>
           </div>
       </div>
         <div class="px-5 py-10">
-          <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2">Etape Suivante</RouterLink>
+          <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2" @click="handleSubmit">Etape Suivante</RouterLink>
           <RouterLink  class="underline mx-3 my-8 block sm:inline-block" to="/circuit">Retour a l’etape precedante</RouterLink>
         </div>
       </div>
@@ -186,9 +186,38 @@
   import NavBar from "../../components/NavBar.vue";
   import StepsHeader from "../../components/Circuit/StepsHeader.vue";
   import Footer from "../../components/Footer.vue";
+  import { ref } from "vue";
   
+  import { useCircuit } from "../../stores/Circuit"
+
   export default {
     components: { NavBar, StepsHeader, Footer },
+
+    setup() {
+
+      const circuit = useCircuit();
+
+      const checkedBagage = ref([]);
+      const motif = ref('');
+      const equipements = ref([]);
+      const detailDeVoyage = ref('');
+
+      const handleSubmit = () => {
+        circuit.setEquipements(equipements.value);
+        circuit.setMotif(motif.value);
+        circuit.setBagages(checkedBagage.value);
+        circuit.setDetailDeVoyage(detailDeVoyage.value);
+    };
+
+      return {
+        handleSubmit,
+        checkedBagage,
+        motif,
+        equipements,
+        detailDeVoyage
+      };
+    },
+
   };
   </script>
   

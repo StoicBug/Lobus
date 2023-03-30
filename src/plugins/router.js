@@ -90,7 +90,7 @@ const routes = [
     children: [
       {
         path: "",
-        component: ValiderEtContinue,
+        component: ()=> import("../components/Circuit/ValiderEtContinue.vue"),
       },
       {
         path: "4",

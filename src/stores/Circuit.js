@@ -1,12 +1,13 @@
 import { defineStore } from 'pinia'
 
-
-export const useAllerSimple = defineStore('aller-simple', {
-    state: () => ({ 
+export const useCircuit = defineStore('circuit', {
+    state: () => ({
         placeDeDepart: '',
         placeDArrivee: '',
         dateDeDepart: '',
+        dateDeRetour: '',
         heureDeDepart: '',
+        heureDeRetour: '',
         voyageurs: 1,
         bagages: [],
         motif: '',
@@ -15,6 +16,7 @@ export const useAllerSimple = defineStore('aller-simple', {
             SigeBebe: false,
             glacie: false
         },
+        detailDeVoyage: '',
         particulier: {
             prenom:'',
             nom:'',
@@ -33,8 +35,8 @@ export const useAllerSimple = defineStore('aller-simple', {
             passwordConfirm:'',
             isAgree: false
         }
-     }),
-     actions: {
+    }),
+    actions: {
         setPlaceDeDepart(placeDeDepart) {
             this.placeDeDepart = placeDeDepart
         },
@@ -44,8 +46,14 @@ export const useAllerSimple = defineStore('aller-simple', {
         setDateDeDepart(dateDeDepart) {
             this.dateDeDepart = dateDeDepart
         },
+        setDateDeRetour(dateDeRetour) {
+            this.dateDeRetour = dateDeRetour
+        },
         setHeureDeDepart(heureDeDepart) {
             this.heureDeDepart = heureDeDepart
+        },
+        setHeureDeRetour(heureDeRetour) {
+            this.heureDeRetour = heureDeRetour
         },
         setVoyageurs(voyageurs) {
             this.voyageurs = voyageurs
@@ -60,9 +68,10 @@ export const useAllerSimple = defineStore('aller-simple', {
         setEquipements(equipements) {
             this.equipements = equipements
         },
-
+        setDetailDeVoyage(detailDeVoyage) {
+            this.detailDeVoyage = detailDeVoyage
+        },
         //etape 3 Setters
-
         registerParticulier(prenom, nom, email, password, password_confirmation, isAgree) {
             this.particulier = Object.assign(this.particulier, {
                 prenom,
@@ -85,6 +94,5 @@ export const useAllerSimple = defineStore('aller-simple', {
                 isAgree
             })
         }
-
-     }
-  })
+    }
+})
