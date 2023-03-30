@@ -36,42 +36,42 @@
               <div class="col-span-2">
                 <label for="" class="mr-2">Valise classique </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="valiseClassique"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Grande valise </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="grandeValise"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Bagage volumineux</label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="bagaeVolumineux" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Matérielle de surf </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="materialSurf"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Matérielle de golf</label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox"  v-model="checkedBagage" value="materialGolf"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Pas de bagage </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" v-model="checkedBagage" value="pasBagae" />
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -87,21 +87,21 @@
               <div class="col-span-2">
                 <label for="" class="mr-2">Micro audio </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" value="microAudio" v-model="equipements"/>
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Siege bébé </label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" value="siegeBebe" v-model="equipements" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div class="col-span-2">
                 <label for="" class="mr-2">Glacié</label> <br />
                 <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" value="glacie" v-model="equipements"/>
                   <span class="slider round"></span>
                 </label>
               </div>
@@ -109,7 +109,7 @@
           </div>
         </div>
         <div class="px-5 py-10">
-          <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="/transfert/etape2">Etape Suivante</RouterLink>
+          <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="/transfert/etape2" @click="submit">Etape Suivante</RouterLink>
           <RouterLink  class="underline mx-3 my-8 block sm:inline-block" to="/transfert">Retour a l’etape precedante</RouterLink>
         </div>
       </div>
@@ -121,9 +121,29 @@
   import NavBar from "../../components/NavBar.vue";
   import StepsHeader from "../../components/Transfert/StepsHeader.vue";
   import Footer from "../../components/Footer.vue";
+
+  import { ref } from "vue";
+  import { useTransfer } from "../../stores/transfer";
   
   export default {
     components: { NavBar, StepsHeader, Footer },
+    setup() {
+      const transfer  = useTransfer();
+
+      const checkedBagage = ref([])
+      const equipements = ref([])
+
+      const submit = ()=>{
+        transfer.setBagages(checkedBagage.value)
+        transfer.setEquipements(equipements.value)
+      }
+
+      return { 
+        checkedBagage,
+        equipements,
+        submit
+       };
+    },
   };
   </script>
   
