@@ -36,11 +36,6 @@
           </div>
         </div>
         <RouterView :checked="checked"></RouterView>
-
-        <div class="px-5 py-10">
-          <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2">Etape Suivante</RouterLink>
-          <RouterLink class="underline mx-3" to="/etape1">Retour a l’etape precedante</RouterLink>
-        </div>
         <p class="px-10 pb-10" @click="getpath">Vous n’avez pas de compte chez Groupito ? <RouterLink to="/etape2/4"
             class=" text-primary text-lg font-medium underline cursor-pointer">Indiquez vos coordonnées</RouterLink>
         </p>
@@ -59,13 +54,12 @@ import Societe from "../../components/AllerSimple/Societe.vue";
 import ValiderEtContinue from "../../components/AllerSimple/ValiderEtContinue.vue";
 
 
-import { useRoute } from 'vue-router'
-import { computed } from 'vue'
-
-
 export default {
 
   components: { NavBar, StepsHeader, Footer, Particulier, Societe, ValiderEtContinue },
+
+
+
   data() {
     return {
       checked: true,
@@ -83,13 +77,6 @@ export default {
         "shadow-sm": this.checked,
       };
     },
-  },
-  setup() {
-    const path = useRoute()
-    console.log(path.path)
-    return {
-      path: computed(() => path.path),
-    }
   },
 };
 </script>

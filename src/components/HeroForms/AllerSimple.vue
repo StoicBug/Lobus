@@ -1,7 +1,3 @@
-<script>
-export default {};
-</script>
-
 <template>
   <div class="bg-white p-10 rounded-md relative">
     <img
@@ -40,10 +36,10 @@ export default {};
             </span>
             <input
               type="text"
-              name="q"
               class="py-2 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Place de depart"
               autocomplete="off"
+              v-model="placeDeDepart"
             />
           </div>
           <br />
@@ -79,6 +75,7 @@ export default {};
               class="py-2 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Place d’arrivée"
               autocomplete="off"
+              v-model="placeDArrivee"
             />
           </div>
         </div>
@@ -88,6 +85,7 @@ export default {};
           <input
             type="date"
             class="py-1 px-6 border border-gray rounded-lg mt-2 flex flex-row-reverse justify-between"
+            v-model="dateDeDepart"
           />
           <br />
           <label for="" class="">Aller à</label>
@@ -99,6 +97,7 @@ export default {};
               class="py-2 text-sm text-silve px-8 focus:outline-none border border-gray rounded-lg flex justify-between flex-row-reverse w-52"
               placeholder="Adulte(s)"
               autocomplete="off"
+              v-model="heureDeDepart"
             />
           </div>
         </div>
@@ -125,22 +124,64 @@ export default {};
               </svg>
             </span>
             <input
-              type="text"
+              type="number"
               name="q"
               class="py-2 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg"
               placeholder="Adulte(s)"
               autocomplete="off"
+              v-model="voyageurs"
             />
           </div>
         </div>
             
       </div>
       <p class="text-end">
-        <RouterLink class="px-6 py-2 rounded-md bg-primary text-white font-medium" to="etape1">Suivant</RouterLink>
+        <button>
+          <RouterLink class="px-6 py-2 rounded-md bg-primary text-white font-medium" to="etape1" @click="handleSubmit">Suivant</RouterLink>
+        </button>
       </p>
     </form>
   </div>
 </template>
+
+<script>
+
+import { ref } from "vue";
+import {useAllerSimple} from "../../stores/AllerSimple"
+
+export default {
+  setup() {
+
+    const allerSimple = useAllerSimple();
+
+    const placeDeDepart = ref("");
+    const placeDArrivee = ref("");
+    const dateDeDepart = ref("");
+    const heureDeDepart = ref("");
+    const voyageurs = ref(0);
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      allerSimple.setPlaceDeDepart(placeDeDepart.value);
+      allerSimple.setPlaceDArrivee(placeDArrivee.value);
+      allerSimple.setDateDeDepart(dateDeDepart.value);
+      allerSimple.setHeureDeDepart(heureDeDepart.value);
+      allerSimple.setVoyageurs(voyageurs.value);
+    };
+
+
+
+    return {
+      placeDeDepart,
+      placeDArrivee,
+      dateDeDepart,
+      heureDeDepart,
+      voyageurs,
+      handleSubmit,
+    };
+  },
+};
+</script>
 
 <style scoped>
 .switch {
