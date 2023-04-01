@@ -5,7 +5,6 @@
             <p class="pt-2 md:w-2/3">
                 {{ $t('heroSubtitle')  }}
             </p>
-            <button  @click="$i18n.locale='en'">chnage lang</button>
         </div>
         <div class="lg:w-5/6 mx-auto -mt-36" id="noblur">
                 <HeroTabs />
