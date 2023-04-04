@@ -184,7 +184,7 @@
   
   <script>
   import NavBar from "../../components/NavBar.vue";
-  import StepsHeader from "../../components/Circuit/StepsHeader.vue";
+  import StepsHeader from "../../components/Circuit/Stepsheader";
   import Footer from "../../components/Footer.vue";
   import { ref } from "vue";
   
