@@ -48,7 +48,7 @@
           <a class="underline" href="">Forgot password</a>
         </p>
 
-        <button class="text-white bg-primary px-6 py-3 rounded-md mx-3">LogIn</button>
+        <button class="text-white bg-primary px-6 py-3 rounded-md mx-3"><RouterLink to="/particulier">LogIn</RouterLink></button>
       </div>
     </form>
   </div>

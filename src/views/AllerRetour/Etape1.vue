@@ -3,22 +3,6 @@
   <div class="container mx-auto py-10">
     <StepsHeader />
     <div class="shadow-lg bg-landing-bg bg-no-repeat bg-cover bg-opacity-20">
-      <div class="grid grid-cols-3 gap-4 w-full py-10 text-center">
-        <div class="col-span-1 text-lg font-medium">
-          Estimation basse <br />
-          800dh
-        </div>
-        <div class="col-span-1 text-xl font-semibold">
-          Prix moyen estimé <br />
-          <span class="text-primary text-2xl">1200dh </span>TCC <br />
-          <span class="font-normal text-lg">(soit 1200dh par personne)</span>
-        </div>
-        <div class="col-span-1 text-lg font-medium">
-          Estimation haute <br />
-          1200dh
-        </div>
-      </div>
-      <hr class="text-gray w-11/12 mx-auto" />
       <div class="px-10">
         <h2 class="py-6 text-lg font-medium">Votre Voyage</h2>
         <p class="text-left text-gray pb-10">

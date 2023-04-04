@@ -29,6 +29,11 @@ const routes = [
     ],
   },
   {
+    path: "/:catchAll(.*)",
+    name: "notfound",
+    component: () => import("../views/NotFound.vue"),
+  },
+  {
     path: "/login",
     name: "login",
     component: () => import("../views/LogIn.vue"),
@@ -117,6 +122,11 @@ const routes = [
         component: () => import("../components/Transfert/LogIn.vue"),
       },
     ],
+  },
+  {
+    path: "/particulier",
+    name: "particulier",
+    component: () => import("../views/Particulier/Particulier.vue"),
   },
 ];
 

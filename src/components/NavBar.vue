@@ -1,8 +1,8 @@
 <template>
   <nav class="shadow-sm">
     <div class="px-8 py-6 flex justify-between items-center container mx-auto">
-      <RouterLink class="text-3xl font-extrabold italic" to="/">
-        LOB<span class="text-orange-600">U</span>S
+      <RouterLink class="" to="/">
+        <img src="../assets/Logo.png" alt="" class="w-36">
       </RouterLink>
       <span
         class="md:hidden absolute right-6 top-6 cursor-pointer text-4xl"
