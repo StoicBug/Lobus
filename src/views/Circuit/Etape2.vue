@@ -46,7 +46,7 @@
   
   <script>
   import NavBar from "../../components/NavBar.vue";
-  import StepsHeader from "../../components/Circuit/StepsHeader.vue";
+  import StepsHeader from "../../components/Circuit/Stepsheader.vue";
   import Footer from "../../components/Footer.vue";
   import Particulier from "../../components/Circuit/Particulier.vue";
   import Societe from "../../components/Circuit/Societe.vue";
