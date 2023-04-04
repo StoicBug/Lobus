@@ -51,7 +51,7 @@
   
   <script>
   import NavBar from "../../components/NavBar.vue";
-  import StepsHeader from "../../components/Transfert/Stepsheader";
+  import StepsHeader from "../../components/Transfert/Stepsheader.vue";
   import Footer from "../../components/Footer.vue";
   import Particulier from "../../components/Transfert/Particulier.vue";
   import Societe from "../../components/Transfert/Societe.vue";
