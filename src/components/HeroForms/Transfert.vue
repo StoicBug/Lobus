@@ -107,7 +107,7 @@
 <script>
 
 import { ref } from "vue";
-import { useTransfer } from "../../stores/transfer";
+import { useTransfer } from "../../stores/Transfer";
 
 export default {
 
