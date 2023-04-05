@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-hero-pattern h-full bg-cover bg-no-repeat bg-primary pb-10 pt-10 ">
+    <section class="bg-hero-pattern h-full bg-cover bg-no-repeat bg-fixed bg-primary pb-10 pt-10 m-0">
         <div class="blurbox pl-10 pr-5 lg:w-5/6 mx-auto pt-12 pb-36 text-white container">
             <h1 class=" text-3xl font-bold md:w-4/6">{{ $t('heroTitle') }}</h1>
             <p class="pt-2 md:w-2/3">
