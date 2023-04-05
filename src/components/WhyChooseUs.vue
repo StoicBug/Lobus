@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto" id="LOBUS-garantit">
         <div class="text-center pt-10">
             <p class="text-primary">{{ $t('whyChooseUsIntroTitle') }}</p>
             <h1 class="text-2xl font-semibold ">- {{ $t('whyChooseUsTitle') }} -</h1>

@@ -8,35 +8,17 @@
     <ol
       class="relative z-10 flex justify-between text-sm font-medium text-gray-500"
     >
-      <li class="flex items-center gap-2 bg-white p-2">
+
+      <li class="flex items-center gap-2 bg-white p-2" v-for="step in steps">
         <span
-          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6"
+          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6" :class="getStepClass(step)"
         >
-          1
+          {{ step.id }}
         </span>
 
-        <span class="hidden sm:block"> Information </span>
+        <span class="hidden sm:block"> {{ step.name }} </span>
       </li>
 
-      <li class="flex items-center gap-2 bg-white p-2">
-        <span
-          class="h-6 w-6 rounded-full bg-secondary text-center text-[10px] font-bold leading-6 text-white"
-        >
-          2
-        </span>
-
-        <span class="hidden sm:block"> Valider </span>
-      </li>
-
-      <li class="flex items-center gap-2 bg-white p-2">
-        <span
-          class="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6"
-        >
-          3
-        </span>
-
-        <span class="hidden sm:block"> Valider et Continue </span>
-      </li>
     </ol>
   </div>
 </div>
@@ -44,7 +26,44 @@
 </template>
 
 <script>
-
+export default {
+  name: "StepsHeader",
+  props: {
+    step: {
+      type: Number,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      steps: [
+        {
+          id: 1,
+          name: "Information",
+        },
+        {
+          id: 2,
+          name: "Valider",
+        },
+        {
+          id: 3,
+          name: "Valider et Continue",
+        },
+      ],
+    };
+  },
+  methods: {
+    getStepClass(step) {
+      if (step.id === this.step) {
+        return "bg-secondary text-white";
+      } else if (step.id < this.step) {
+        return "bg-primary text-white";
+      } else {
+        return "bg-gray-100";
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>

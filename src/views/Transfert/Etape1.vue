@@ -1,7 +1,7 @@
 <template>
     <NavBar />
     <div class="container mx-auto py-10">
-      <StepsHeader />
+      <StepsHeader :step="2" />
       <div class="shadow-lg bg-landing-bg bg-no-repeat bg-cover bg-opacity-20">
         <div class="px-10">
           <h2 class="py-6 text-lg font-medium">Votre Voyage</h2>

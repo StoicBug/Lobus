@@ -1,5 +1,5 @@
 <template >
-    <div class="bg-landing-bg bg-no-repeat bg-cover bg-opacity-40">
+    <div class="bg-landing-bg bg-no-repeat bg-cover bg-opacity-40" id="comment-macrh">
 
     
     <section class="container mx-auto pt-10" >

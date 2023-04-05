@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto" id="plan-trip2">
         <div class="text-center pt-10">
             <p class="text-primary">Your best choice</p>
             <h1 class="text-2xl font-semibold ">- 3 simple steps to plan your trip -</h1>

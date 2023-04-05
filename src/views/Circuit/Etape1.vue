@@ -1,7 +1,7 @@
 <template>
     <NavBar />
     <div class="container mx-auto py-10">
-      <StepsHeader />
+      <StepsHeader :step="2" />
       <div class="shadow-lg bg-landing-bg bg-no-repeat bg-cover bg-opacity-20">
         <div class="px-10">
           <h2 class="py-6 text-lg font-medium">Votre Voyage</h2>
@@ -65,55 +65,14 @@
         <hr class="text-gray w-11/12 mx-auto" />
         <div class="px-10">
           <h2 class="py-6 text-lg font-medium">Motif du voyage</h2>
-          <div class="p-2">
-            <div class="mb-8 grid grid-cols-6 gap-5">
-              <div class="col-span-2">
-                <label for="" class="mr-2">Déplacement sportif </label> <br />
-                <label class="switch">
-                  <input type="radio" name="motif" v-model="motif" value="deplacementSportif" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-              <div class="col-span-2">
-                <label for="" class="mr-2">Déplacement d’entreprise </label>
-                <br />
-                <label class="switch">
-                  <input type="radio" name="motif" v-model="motif" value="deplacementEntre" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-              <div class="col-span-2">
-                <label for="" class="mr-2">Mariage ou cérémonie</label> <br />
-                <label class="switch">
-                  <input type="radio" name="motif" v-model="motif" value="mariageCer" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-              <div class="col-span-2">
-                <label for="" class="mr-2">Group d’étudiants</label> <br />
-                <label class="switch">
-                  <input type="radio" name="motif" v-model="motif" value="groupEtudiant"/>
-                  <span class="slider round"></span>
-                </label>
-              </div>
-              <div class="col-span-2">
-                <label for="" class="mr-2">Group de touristes résidant</label>
-                <br />
-                <label class="switch">
-                  <input type="radio" name="motif" v-model="motif" value="groupTouristRes" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-              <div class="col-span-2">
-                <label for="" class="mr-2">Group de touriste non résidant</label>
-                <br />
-                <label class="switch">
-                  <input type="radio" name="motif" v-model="motif" value="groupTourNonRes" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-            </div>
-          </div>
+          <select name="" id="" v-model="motif" class="mb-5">
+          <option value="deplacementSportif">Déplacement sportif</option>
+          <option value="deplacementEntre" selected="selected">Déplacement d’entreprise</option>
+          <option value="mariageCer">Mariage ou cérémonie</option>
+          <option value="groupEtudiant">Group d’étudiants</option>
+          <option value="groupTouristRes">Group de touristes résidant</option>
+          <option value="groupTourNonRes">Group de touriste non résidant</option>
+        </select>
         </div>
         <hr class="text-gray w-11/12 mx-auto" />
         <div class="px-10">
