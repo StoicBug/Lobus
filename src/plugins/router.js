@@ -128,6 +128,11 @@ const routes = [
     name: "particulier",
     component: () => import("../views/Particulier/Particulier.vue"),
   },
+  {
+    path: "/particulier/offers",
+    name: "offers",
+    component: () => import("../views/Particulier/Offers.vue"),
+  },
 ];
 
 const router = createRouter({
