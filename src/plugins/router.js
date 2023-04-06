@@ -127,6 +127,16 @@ const routes = [
     path: "/particulier",
     name: "particulier",
     component: () => import("../views/Particulier/Particulier.vue"),
+    children: [
+      {
+        path: "",
+        component: ()=> import("../components/Particulier/DemandeTable.vue"),
+      },
+      {
+        path: "accepted",
+        component: ()=> import("../components/Particulier/AcceptedTable.vue"),
+      },
+    ],
   },
   {
     path: "/particulier/offers",
