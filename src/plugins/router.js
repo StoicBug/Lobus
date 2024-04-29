@@ -59,7 +59,7 @@ const routes = [
       },
       {
         path: "4",
-        component: () => import("../components/AllerSimple/LogIn.vue"),
+        component: () => import("../components/LogIn.vue"),
       },
     ],
   },
@@ -79,7 +79,7 @@ const routes = [
       },
       {
         path: "4",
-        component: () => import("../components/AllerRetour/LogIn.vue"),
+        component: () => import("../components/LogIn.vue"),
       },
     ],
   },
@@ -99,7 +99,7 @@ const routes = [
       },
       {
         path: "4",
-        component: () => import("../components/Circuit/LogIn.vue"),
+        component: () => import("../components/LogIn.vue"),
       },
     ],
   },
@@ -119,7 +119,7 @@ const routes = [
       },
       {
         path: "4",
-        component: () => import("../components/Transfert/LogIn.vue"),
+        component: () => import("../components/LogIn.vue"),
       },
     ],
   },

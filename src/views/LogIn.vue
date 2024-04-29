@@ -9,7 +9,7 @@
 <script>
 import NavBar from '../components/NavBar.vue';
 import Footer from '../components/Footer.vue';
-import LogIn from '../components/AllerSimple/LogIn.vue'
+import LogIn from '../components/LogIn.vue'
 
 
 export default {
@@ -19,4 +19,4 @@ export default {
 
 <style scoped>
 
-</style>
+</style>../components/LogIn.vue
