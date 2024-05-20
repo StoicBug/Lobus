@@ -12,7 +12,7 @@
         </div>
         <div class="grid grid-cols-6 pt-10 gap-3">
             <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-2">
-                <img src="../assets/BoxModel.png" alt="">
+                <img class="w-full p-5" src="../assets/images/home/Envoyez_votre_demande.svg" alt="">
             </div>
             <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-4 flex flex-col justify-center">
                 <h1 class="text-2xl font-semibold text-primary">01. <br /> {{ $t('stepsStep1Title') }} </h1>
@@ -27,12 +27,12 @@
                 <p>{{ $t('stepsStep2Content') }}</p>
             </div>
             <div class="col-span-4 row-start-1 col-start-2 md:col-span-2 md:col-start-4">
-                <img src="../assets/BoxModel.png" alt="">
+                <img class="w-full p-5" src="../assets/images/home/Comparez_les_prix_et_services.svg" alt="">
             </div>
         </div>
         <div class="grid grid-cols-6 pt-10 gap-3">
             <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-2">
-                <img src="../assets/BoxModel.png" alt="">
+                <img class="w-full p-5" src="../assets/images/home/Choisissez_votre_transporteur.svg" alt="">
             </div>
             <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-4 flex flex-col justify-center">
                 <h1 class="text-2xl font-semibold text-primary">03. <br /> {{ $t('stepsStep3Title') }}</h1>
