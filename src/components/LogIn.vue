@@ -9,7 +9,7 @@
       </p>
     </div>
 
-    <form action="" class="mx-auto mt-8 mb-0 max-w-md space-y-4">
+    <form @submit.prevent="login" action="" class="mx-auto mt-8 mb-0 max-w-md space-y-4">
       <div>
         <label for="email" class="sr-only">Email</label>
         <div class="relative focus-within:text-gray-400 mt-2">
@@ -22,7 +22,7 @@
           </span>
           <input type="email" name="q"
             class="py-3 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg w-full"
-            placeholder="Email" autocomplete="off" />
+            placeholder="Email" v-model="email" autocomplete="off" />
         </div>
       </div>
 
@@ -37,7 +37,7 @@
                 d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
             </svg>
           </span>
-          <input type="password" name="q"
+          <input type="password" name="password" v-model="password"
             class="py-3 text-sm text-silve pl-10 focus:outline-none border border-gray rounded-lg w-full"
             placeholder="Password" autocomplete="off" />
         </div>
@@ -46,16 +46,58 @@
       <div class="flex items-center justify-between">
         <p class="text-sm text-gray-500">
           <a class="underline" href="">Forgot password</a>
+          <button ><RouterLink to="/signup">Sign Up</RouterLink></button>
         </p>
 
-        <button class="text-white bg-primary px-6 py-3 rounded-md mx-3"><RouterLink to="/particulier">LogIn</RouterLink></button>
+        <button ><RouterLink to="/particulier">LogIn</RouterLink></button>
+        <input
+            type="submit"
+            class="text-white bg-primary px-6 py-3 rounded-md mx-3"
+            value="Send magic link"
+        />
+        <button class="py-2 px-4 bg-red-400" @click.prevent="seeCurrentUser">SEE USER</button>
+        <button class="py-2 px-4 bg-red-400" @click.prevent="logOut">LOG OUT</button>
       </div>
     </form>
   </div>
 </template>
 
-<script>
+<script setup>
 
+
+import { ref } from 'vue'
+import { supabase } from '../supabase'
+
+
+const email = ref('')
+const password = ref('')
+
+async function login(){
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: email.value,
+    password: password.value
+  })
+
+  if (error) {
+    alert(error.message)
+  } else {
+    console.log('Logged In!')
+  }
+}
+
+async function seeCurrentUser(){
+  const user = await supabase.auth.getSession();
+  console.log("USER SESSION ==>", user)
+}
+
+async function logOut(){
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    console.log('Error logging out:', error.message)
+  } else {
+    console.log('Logged out!')
+  }
+}
 
 </script>
 

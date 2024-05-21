@@ -28,6 +28,13 @@ const routes = [
       },
     ],
   },
+
+  {
+    path: "/signup",
+    name: "signup",
+    component: () => import("../views/SignUpView.vue"),
+
+  },
   {
     path: "/:catchAll(.*)",
     name: "notfound",
