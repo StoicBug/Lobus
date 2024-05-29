@@ -99,8 +99,6 @@ export default {
   },
   async created() {
     this.currentUser = await this.checkUser();
-    this.tripData.tripid = this.generateTripId(10); // Adjust the length of the trip ID as needed
-
   },
   methods: {
     async checkUser() {
@@ -110,7 +108,7 @@ export default {
 
     async confirmTrip() {
       const tripData = {
-        tripid : '',
+        tripid : '6',
         triptype: 'One-Way', // You need to set this based on your application logic
         baggage: this.checkedBagage.join(', '), // Convert checkedBagage to a string
         reasonfortravel: this.motif,
@@ -138,14 +136,6 @@ export default {
       }
     },
 
-    generateTripId(length) {
-      const characters = '123456';
-      let tripid = '';
-      for (let i = 0; i < length; i++) {
-        tripid += characters.charAt(Math.floor(Math.random() * characters.length));
-      }
-      return tripid;
-    }
   }
 };
 
