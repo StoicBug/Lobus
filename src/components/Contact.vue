@@ -3,7 +3,7 @@
     <!-- Start Section-->
     <!-- Start Section-->
     <section class="relative lg:py-24 py-16" id="contact">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="grid md:grid-cols-12 grid-cols-1 items-center">
           <div class="lg:col-span-7 md:col-span-6">
             <img src="../assets/contact.svg" alt="" class="ml-20 w-[500px]">
@@ -11,31 +11,31 @@
 
           <div class="lg:col-span-5 md:col-span-6">
             <div class="lg:ms-5">
-              <div class="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-700 p-6">
-                <h3 class="mb-6 text-2xl leading-normal font-medium">Get in touch !</h3>
+              <div class="bg-white  rounded-md shadow  p-6">
+                <h3 class="mb-6 text-2xl leading-normal font-medium text-center">Get in touch !</h3>
 
                 <form>
                   <div class="grid lg:grid-cols-12 lg:gap-6">
                     <div class="lg:col-span-6 mb-5">
                       <label for="name" class="form-label font-medium">Your Name:</label>
-                      <input name="name" id="name" type="text" class="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2" placeholder="Name :">
+                      <input name="name" id="name" type="text" class="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit rounded outline-none focus:border-violet-600/50  focus:ring-0 mt-2" placeholder="Name :">
                     </div>
 
                     <div class="lg:col-span-6 mb-5">
                       <label for="email" class="form-label font-medium">Your Email:</label>
-                      <input name="email" id="email" type="email" class="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2" placeholder="Email :">
+                      <input name="email" id="email" type="email" class="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit rounded outline-none focus:border-violet-600/50  focus:ring-0 mt-2" placeholder="Email :">
                     </div>
                   </div>
 
                   <div class="grid grid-cols-1">
                     <div class="mb-5">
                       <label for="subject" class="form-label font-medium">Your Question:</label>
-                      <input name="subject" id="subject" class="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2" placeholder="Subject :">
+                      <input name="subject" id="subject" class="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit  rounded outline-none focus:border-violet-600/50  focus:ring-0 mt-2" placeholder="Subject :">
                     </div>
 
                     <div class="mb-5">
                       <label for="comments" class="form-label font-medium">Your Comment:</label>
-                      <textarea name="comments" id="comments" class="form-input w-full py-2 px-3 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2 textarea h-28" placeholder="Message :"></textarea>
+                      <textarea name="comments" id="comments" class="form-input w-full py-2 px-3 bg-transparent border border-inherit  rounded outline-none focus:border-violet-600/50 focus:ring-0 mt-2 textarea h-28" placeholder="Message :"></textarea>
                     </div>
                   </div>
                   <button type="submit" id="submit" name="send" class="py-2 px-5 inline-block font-normal tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md">Send Message</button>
@@ -46,7 +46,7 @@
         </div>
       </div><!--end container-->
 
-      <div class="container lg:mt-24 mt-16">
+      <div class="container mx-auto lg:mt-24 mt-16">
         <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
           <div class="text-center px-6">
             <div class="relative overflow-hidden text-transparent -m-3">
