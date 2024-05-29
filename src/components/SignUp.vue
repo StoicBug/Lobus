@@ -3,8 +3,7 @@
     <h1 class="text-2xl font-bold sm:text-3xl">Sign Up</h1>
 
     <p class="mt-4 text-gray-500">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla
-      eaque error neque ipsa culpa autem, at itaque nostrum!
+      Welocme to Lobus . The Place where you can choose the best plan for your trip !
     </p>
   </div>
   <form @submit.prevent="" novalidate="" class="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">

@@ -56,6 +56,11 @@ const routes = [
     component: Etape1,
   },
   {
+    path: "/etape3",
+    name: "etape3",
+    component: () => import("../views/AllerSimple/Etape3.vue"),
+  },
+  {
     path: "/etape2",
     name: "etape2",
     component: () => import("../views/AllerSimple/Etape2.vue"),
@@ -70,6 +75,7 @@ const routes = [
       },
     ],
   },
+
   {
     path: "/aller-retour/etape1",
     name: "aller-retour etape1",
@@ -159,6 +165,11 @@ const routes = [
     path: "/contact",
     name: "contact",
     component: () => import("../views/Contact.vue"),
+  },
+  {
+    path: "/services",
+    name: "services",
+    component: () => import("../views/Services.vue"),
   },
 
 ];

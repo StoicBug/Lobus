@@ -1,15 +1,17 @@
 <template>
-      <NavBar />
+  <component :is="currentUser ? 'ParticulierHeader' : 'NavBar'" />
   <div class="container mx-auto py-10">
     <StepsHeader :step="2" />
     <div class="shadow-lg bg-landing-bg bg-no-repeat bg-cover bg-opacity-20">
       <div class="px-10">
         <h2 class="py-6 text-lg font-medium">Votre Voyage</h2>
         <p class="text-left text-gray pb-10">
-          Aller simple Nantes, France - Paris, France <br />
-          Aller: 23/03/2023 <br />
-          Distance routiére: 384 km <br />
-          Passagers: 30
+          Aller - Retour :  Du {{ placeDeDepart }} à {{placeDArrivee}}  <br />
+          Date Aller : {{ dateAller}} <br />
+          Date Retour : {{ dateRetour}} <br />
+          Heure de Depart : {{heureAller}} <br />
+          Passagers: {{ nombreDePassagers }}
+
         </p>
       </div>
       <hr class="text-gray w-11/12 mx-auto" />
@@ -133,9 +135,11 @@ import Footer from "../../components/Footer.vue";
 import { ref } from "vue";
 
 import {useAllerRetour} from "../../stores/AllerRetour"
+import {supabase} from "../../supabase.js";
+import ParticulierHeader from "../../components/Particulier/ParticulierHeader.vue";
 
 export default {
-  components: { NavBar, StepsHeader, Footer },
+  components: { NavBar, StepsHeader, Footer , ParticulierHeader },
 
   setup(){
     const allerRetour = useAllerRetour()
@@ -145,6 +149,14 @@ export default {
     const equipements = ref([]);
     const detailDeVoyage = ref('');
 
+    const placeDeDepart = allerRetour.placeDeDepart;
+    const placeDArrivee = allerRetour.placeDArrivee;
+    const dateAller = allerRetour.dateDeDepart;
+    const dateRetour = allerRetour.dateArriver;
+    const nombreDePassagers = allerRetour.voyageurs;
+    const heureAller = allerRetour.heureDeDepart;
+    const heureRetour = allerRetour.heureArriver;
+
     const handleSubmit = () => {
       allerRetour.setEquipements(equipements.value);
       allerRetour.setMotif(motif.value);
@@ -152,13 +164,36 @@ export default {
       allerRetour.setDetailDeVoyage(detailDeVoyage.value);
     };
 
-    return { 
+    return {
       handleSubmit,
       checkedBagage,
       motif,
       equipements,
-      detailDeVoyage
+      detailDeVoyage,
+      placeDeDepart,
+      placeDArrivee,
+      dateAller,
+      dateRetour,
+      nombreDePassagers,
+      heureAller,
+      heureRetour
+
      }
+  },
+
+  data() {
+    return {
+      currentUser: null,
+    }
+  },
+  async created() {
+    this.currentUser = await this.checkUser();
+  },
+  methods: {
+    async checkUser() {
+      const { data: { user } } = await supabase.auth.getUser();
+      return user;
+    }
   }
 
 }

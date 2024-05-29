@@ -107,7 +107,7 @@
         </div>
       </div>
       <div class="col-span-full py-5">
-        <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mr-3" to="etape2" @click="submit">Etape Suivante
+        <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mr-3" to="etape3" @click="submit">Etape Suivante
         </RouterLink>
         <RouterLink class="underline mx-3" to="/etape1">Retour a l’etape precedante</RouterLink>
       </div>

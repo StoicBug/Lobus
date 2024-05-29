@@ -2,7 +2,6 @@
     <Particulier v-if="checked"/>
     <Societe v-else/>
 </template>
-
 <script>
 import Particulier from './Particulier.vue';
 import Societe from './Societe.vue';

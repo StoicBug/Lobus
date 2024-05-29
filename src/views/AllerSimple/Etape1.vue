@@ -1,15 +1,15 @@
 <template>
-  <NavBar />
+  <component :is="currentUser ? 'ParticulierHeader' : 'NavBar'" />
   <div class="container mx-auto py-10">
     <StepsHeader :step="2" />
     <div class="shadow-lg bg-landing-bg bg-no-repeat bg-cover bg-opacity-20">
       <div class="px-10">
         <h2 class="py-6 text-lg font-medium">Votre Voyage</h2>
         <p class="text-left text-gray pb-10">
-          Aller simple Nantes, France - Paris, France <br />
-          Aller: 23/03/2023 <br />
-          Distance routiére: 384 km <br />
-          Passagers: 30
+          AllerSimple : Du {{ placeDeDepart }} à {{placeDArrivee}}  <br />
+          Date De Depart: {{dateDeDepart}} <br />
+          Heure : {{ heureDeDepart }} <br />
+          Passagers: {{ voyageurs }}
         </p>
       </div>
       <hr class="text-gray w-11/12 mx-auto" />
@@ -104,8 +104,8 @@
         </div>
       </div>
       <div class="px-5 py-10">
-        <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2" @click="handleSubmit">Etape
-          Suivante</RouterLink>
+        <RouterLink v-if="currentUser" class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape3" @click="handleSubmit">Etape Suivante</RouterLink>
+        <RouterLink v-else class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2" @click="handleSubmit">Etape Suivante</RouterLink>
         <RouterLink class="underline mx-3 my-8 block sm:inline-block" to="/">Retour a l’etape precedante</RouterLink>
       </div>
     </div>
@@ -119,9 +119,12 @@ import StepsHeader from "../../components/AllerSimple/StepsHeader.vue";
 import Footer from "../../components/Footer.vue";
 import { useAllerSimple } from "../../stores/AllerSimple"
 import { ref } from "vue";
+import ParticulierHeader from "../../components/Particulier/ParticulierHeader.vue";
+import {supabase} from "../../supabase.js";
 
 export default {
-  components: { NavBar, StepsHeader, Footer },
+
+  components: { NavBar, StepsHeader, Footer,ParticulierHeader, },
 
   setup() {
 
@@ -129,8 +132,13 @@ export default {
 
     const checkedBagage = ref([]);
     const motif = ref('');
-
     const equipements = ref([]);
+
+    const placeDeDepart = allerSimple.placeDeDepart
+    const placeDArrivee = allerSimple.placeDArrivee
+    const dateDeDepart = allerSimple.dateDeDepart
+    const heureDeDepart = allerSimple.heureDeDepart
+    const voyageurs = allerSimple.voyageurs
 
     const handleSubmit = () => {
       allerSimple.setEquipements(equipements.value);
@@ -139,16 +147,35 @@ export default {
     };
 
 
-
     return {
       handleSubmit,
       checkedBagage,
       motif,
-      equipements
+      equipements,
+      placeDeDepart,
+      placeDArrivee,
+      dateDeDepart,
+      heureDeDepart,
+      voyageurs
     };
   },
 
+  data() {
+    return {
+      currentUser: null,
+    }
+  },
+  async created() {
+    this.currentUser = await this.checkUser();
+  },
+  methods: {
+    async checkUser() {
+      const { data: { user } } = await supabase.auth.getUser();
+      return user;
+    }
+  }
 };
+
 </script>
 
 <style scoped>

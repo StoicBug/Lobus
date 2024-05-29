@@ -13,7 +13,6 @@
     </section>
     <!-- Hero End -->
     <about-us />
-    <Features />
     <TeamSection />
     <GetInTouch/>
     <Footer />

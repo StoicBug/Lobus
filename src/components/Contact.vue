@@ -124,26 +124,6 @@ export default {
   name: "ContactVue",
   data() {
     return {
-      // ContactData:[
-      //     {
-      //         icon:"uil uil-phone",
-      //         name: "Phone",
-      //         desc: "The phrasal sequence of the is now so that many campaign and benefit",
-      //         title: "+152 534-468-854"
-      //     },
-      //     {
-      //         icon:"uil uil-phone",
-      //         name: "Email",
-      //         desc: "The phrasal sequence of the is now so that many campaign and benefit",
-      //         title: "contact@example.com"
-      //     },
-      //     {
-      //         icon:"uil uil-phone",
-      //         name: "Location",
-      //         desc: "C/54 Northwest Freeway, Suite 558, Houston, USA 485",
-      //         title: "View on Google map"
-      //     }
-      // ]
 
     }
   },

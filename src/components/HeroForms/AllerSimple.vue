@@ -169,8 +169,6 @@ export default {
       allerSimple.setVoyageurs(voyageurs.value);
     };
 
-
-
     return {
       placeDeDepart,
       placeDArrivee,

@@ -23,29 +23,32 @@
         </svg>
       </span>
 
-      <ul class="hidden lg:flex items-center space-x-8">
-        <li>
-          <RouterLink to="/">Home</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/about">About</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/services">Services</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/ressources">Ressources</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/contact">Contact</RouterLink>
-        </li>
-      </ul>
+
 
       <ul
         class="md:flex md:w-auto md:static absolute md:px-0 md:pb-0 md:py-0 md:shadow-none pb-10 top-14 px-2 w-full duration-500 ease-out bg-white shadow-lg py-10 justify-center items-center z-30 overflow-y-hidden"
         :class="[open ? 'right-0' : 'right-[-100%] hidden']"
       >
-      <li class="px-4">
+
+        <ul class=" text-center  mx-auto lg:flex items-center space-x-8">
+          <li>
+            <RouterLink to="/">Home</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/about">About</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/services">Services</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/ressources">Ressources</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/contact">Contact</RouterLink>
+          </li>
+        </ul>
+
+      <li class="px-4 text-center p-5 ">
         <select name="" id="" v-model="$i18n.locale">
         <option value="fr">Francais</option>
         <option value="en">English</option>
@@ -65,7 +68,6 @@
             <RouterLink to="/login">Se connecter</RouterLink>
           </button>
         </li>
-
       </ul>
     </div>
   </nav>

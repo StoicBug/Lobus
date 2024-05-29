@@ -65,32 +65,44 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { supabase } from '../../supabase'
+import { ref, onMounted } from 'vue';
+import { supabase } from '../../supabase';
+import NavBar from "../NavBar.vue";
+import StepsHeader from "../AllerSimple/StepsHeader.vue";
+import Footer from "../Footer.vue";
+import { useAllerSimple } from "../../stores/AllerSimple.js";
 
-const currentUser = ref(null)
+const currentUser = ref(null);
 
 // Fetch the current user's information
-async function fetchCurrentUser() {
-  currentUser.value = supabase.auth.user()
-}
-
-// Call the fetchCurrentUser function on component mount
-
-onMounted(fetchCurrentUser)
-
-// Logout function
-async function logOut() {
-  const { error } = await supabase.auth.signOut()
-  if (error) {
-    console.log('Error logging out:', error.message)
+async function checkUser() {
+  const { data, error } = await supabase.auth.getUser();
+  if (data?.user) {
+    currentUser.value = {
+      name: data.user.user_metadata.full_name || 'User',
+      email: data.user.email,
+    };
   } else {
-    console.log('Logged out!')
-    currentUser.value = null // Reset currentUser to null after logging out
-    window.location.href = '/'; // Redirect to home page after logging out
+    console.error('Error fetching user:', error);
   }
 }
 
+// Call the checkUser function on component mount
+onMounted(() => {
+  checkUser();
+});
+
+// Logout function
+async function logOut() {
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    console.log('Error logging out:', error.message);
+  } else {
+    console.log('Logged out!');
+    currentUser.value = null; // Reset currentUser to null after logging out
+    window.location.href = '/'; // Redirect to home page after logging out
+  }
+}
 </script>
 
 <style scoped>

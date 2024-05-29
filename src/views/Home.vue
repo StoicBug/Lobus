@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { supabase } from '../supabase' // adjust the path as necessary
+import { supabase } from '../supabase'
 import NavBar from "./../components/NavBar.vue";
 import ParticulierHeader from "./../components/Particulier/ParticulierHeader.vue";
 import Hero from "../components/Hero.vue";
