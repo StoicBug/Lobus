@@ -82,6 +82,11 @@ const routes = [
     component: () => import("../views/AllerRetour/Etape1.vue"),
   },
   {
+    path: "/aller-retour/etape3",
+    name: "aller-retour etape3",
+    component: () => import("../views/AllerRetour/Etape3.vue"),
+  },
+  {
     path: "/aller-retour/etape2",
     name: "aller-retour etape2",
     component: () => import("../views/AllerRetour/Etape2.vue"),

@@ -127,8 +127,8 @@
                         <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                             Circuit
                         </td>
-                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">24/05/1995</td>
-                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">AHmed</td>
+                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ offers.dateeffect }}</td>
+                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"></td>
                         <td class="whitespace-nowrap px-4 py-2 text-gray-700">$20,000</td>
                         <td class="whitespace-nowrap px-4 py-2 text-red-600 font-medium">Canceled</td>
                         <td class="whitespace-nowrap px-4 py-2">
@@ -152,20 +152,40 @@
 </template>
 
 <script>
-
 import ParticulierHeader from '../../components/Particulier/ParticulierHeader.vue';
 import Footer from '../../components/Footer.vue';
+import { ref } from 'vue'; // Import ref from Vue for reactive variables
+import { supabase } from '../../supabase.js'; // Import Supabase client instance
 
-export default{
-    name: "Offers",
-    components: {
-        ParticulierHeader,
-        Footer
-    },
-    data(){
-        return{
-            offers: []
+export default {
+  name: "Offers",
+  components: {
+    ParticulierHeader,
+    Footer
+  },
+  setup() {
+    const offers = ref([]); // Reactive variable to hold offers data
+
+    // Function to fetch offers from the database
+    const fetchOffers = async () => {
+      try {
+        const { data, error } = await supabase.from('Offers').select('*'); // Select all columns from Offers table
+        if (error) {
+          console.error('Error fetching offers:', error.message);
+          return;
         }
-    },
+        offers.value = data; // Update offers data with fetched data
+      } catch (error) {
+        console.error('Error fetching offers:', error.message);
+      }
+    };
+
+    // Call fetchOffers function when component is mounted
+    fetchOffers();
+
+    return {
+      offers // Expose offers data to the template
+    };
+  },
 }
 </script>

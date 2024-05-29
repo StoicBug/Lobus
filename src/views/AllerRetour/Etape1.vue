@@ -120,7 +120,8 @@
           </div>
       </div>
       <div class="px-5 py-10">
-        <RouterLink class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="/aller-retour/etape2" @click="handleSubmit">Etape Suivante</RouterLink>
+        <RouterLink v-if="currentUser" class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape3" @click="handleSubmit">Etape Suivante</RouterLink>
+        <RouterLink v-else class="text-white bg-primary px-6 py-3 rounded-md mx-3" to="etape2" @click="handleSubmit">Etape Suivante</RouterLink>
         <RouterLink  class="underline mx-3 my-8 block sm:inline-block" to="/aller-retour">Retour a l’etape precedante</RouterLink>
       </div>
     </div>

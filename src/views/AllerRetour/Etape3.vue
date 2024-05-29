@@ -16,8 +16,8 @@
         <p>{{ dateDeDepart }}</p>
       </div>
       <div class="rounded-lg bg-white shadow-md p-6">
-        <h3 class="text-lg font-semibold mb-2">Heure de Départ</h3>
-        <p>{{ heureDeDepart }}</p>
+        <h3 class="text-lg font-semibold mb-2">Date de Retour</h3>
+        <p>{{ dateDeRetour }}</p>
       </div>
       <div class="rounded-lg bg-white shadow-md p-6">
         <h3 class="text-lg font-semibold mb-2">Voyageurs</h3>
@@ -54,6 +54,7 @@ import { useAllerSimple } from "../../stores/AllerSimple"
 import { ref } from "vue";
 import ParticulierHeader from "../../components/Particulier/ParticulierHeader.vue";
 import {supabase} from "../../supabase.js";
+import {useAllerRetour} from "../../stores/AllerRetour.js";
 
 export default {
 
@@ -61,7 +62,7 @@ export default {
 
   setup() {
 
-    const allerSimple = useAllerSimple();
+    const allerSimple = useAllerRetour();
 
     const placeDeDepart = allerSimple.placeDeDepart
     const placeDArrivee = allerSimple.placeDArrivee
@@ -71,6 +72,7 @@ export default {
     const equipements = allerSimple.equipements;
     const checkedBagage = allerSimple.bagages;
     const motif = allerSimple.motif;
+    const dateDeRetour = allerSimple.dateArriver;
 
 
     const handleSubmit = () => {
@@ -88,7 +90,8 @@ export default {
       placeDArrivee,
       dateDeDepart,
       heureDeDepart,
-      voyageurs
+      voyageurs,
+      dateDeRetour
     };
   },
 
@@ -106,10 +109,9 @@ export default {
       return user;
     },
 
-    async confirmTrip() {
+      async confirmTrip() {
       const tripData = {
-
-        triptype: 'Aller-Simple', // You need to set this based on your application logic
+        triptype: 'Aller-Retour', // You need to set this based on your application logic
         baggage: this.checkedBagage.join(', '), // Convert checkedBagage to a string
         reasonfortravel: this.motif,
         equipment: this.equipements.join(', '), // Convert equipements to a string
