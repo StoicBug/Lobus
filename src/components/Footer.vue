@@ -18,8 +18,8 @@
                     <li class="ml-6">Contact</li>
                     <li class="ml-6">About</li>
                 </ul>
-                <p class="px-5 lg:w-9/12 text-center mx-auto py-5 font-normal">Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska. Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och pesask vyfisat. Viktiga poddradio har un mad och inde. </p>
-                <p>© 2022 LOBUS | Powered by AJICOD</p>
+                <p class="px-5 lg:w-9/12 text-center mx-auto py-5 font-normal"> LOBUS, is set to revolutionize the transportation sector by enabling users to quickly compare services and prices from multiple carriers. Within just a minute, users can submit their requests and receive several personalized offers. </p>
+                <p>© 2024 LOBUS | Powered by AJICOD</p>
             </div>
         </div>
     </div>

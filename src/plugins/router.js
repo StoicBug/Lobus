@@ -150,6 +150,17 @@ const routes = [
     name: "offers",
     component: () => import("../views/Particulier/Offers.vue"),
   },
+  {
+    path: "/about",
+    name: "about",
+    component: () => import("../views/AboutUs.vue"),
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: () => import("../views/Contact.vue"),
+  },
+
 ];
 
 const router = createRouter({
