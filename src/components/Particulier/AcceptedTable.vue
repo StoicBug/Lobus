@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-x-auto">
-    <h1 class="text-2xl font-semibold  mt-6 mb-4">Consult your offers</h1>
+    <h1 class="text-2xl font-semibold  mt-6 mb-4">Consult your trips</h1>
     <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
       <thead>
       <tr>
@@ -24,19 +24,22 @@
       </thead>
 
       <tbody class="divide-y divide-gray-200">
-      <!-- Loop through offers and display them -->
-      <tr v-for="offer in offers" :key="offer.offerid">
+      <!-- Loop through trips and display them -->
+      <tr v-for="trip in trips" :key="trip.tripid">
         <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          {{ offer.triptype }}
+          {{ trip.triptype }}
         </td>
-        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ offer.dateeffect }}</td>
-        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ offer.drivername }}</td>
-        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ offer.price }}</td>
-        <td class="whitespace-nowrap px-4 py-2 text-green-600 font-medium">{{ offer.status }}</td>
+        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ trip.dateeffect }}</td>
+        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ trip.drivername }}</td>
+        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ trip.price }}</td>
+        <td class="whitespace-nowrap px-4 py-2 text-green-600 font-medium">{{ trip.status }}</td>
         <td class="whitespace-nowrap px-4 py-2">
-          <a href="#" class="inline-block rounded bg-green-900 px-4 py-2 text-xs font-medium text-white">
+          <a href="#" class="inline-block rounded bg-secondary px-4 py-2 text-xs font-medium text-white">
             View Details
           </a>
+          <router-link to='/particulier/offers/' class="inline-block rounded bg-primary px-4 py-2 text-xs font-medium text-white mx-2">
+            Consult Offer
+          </router-link>
         </td>
       </tr>
       </tbody>
@@ -50,35 +53,51 @@ import { supabase } from '../../supabase.js';
 
 export default {
   setup() {
-    const offers = ref([]);
+    const trips = ref([]);
 
-    const fetchOffers = async () => {
+    const checkUser = async () => {
       try {
-        const {data, error} = await supabase
-            .from('offers')
-            .select(`
-                        offerid,
-                        dateeffect,
-                        price,
-                        status
-                    `)
-            .eq('status', 'done'); // Filter by status = done
-
-        if (error) {
-          console.error('Error fetching offers:', error.message);
-          return;
-        }
-        offers.value = data;
+        const { data: { user } } = await supabase.auth.getUser();
+        return user;
       } catch (error) {
-        console.error('Error fetching offers:', error.message);
+        console.error('Error fetching user:', error.message);
+        throw error;
       }
     };
 
-    onMounted(fetchOffers);
+    const fetchTrips = async () => {
+      try {
+        const currentUser = await checkUser();
+        const userId = currentUser.id;
+
+        const { data, error } = await supabase
+            .from('trips')
+            .select(`
+            tripid,
+            triptype,
+            status,
+            price,
+            drivername,
+            dateeffect
+          `)
+            .eq('userid', userId)
+            .eq('status', 'Done');
+
+        if (error) {
+          console.error('Error fetching trips:', error.message);
+          return;
+        }
+        trips.value = data;
+      } catch (error) {
+        console.error('Error fetching trips:', error.message);
+      }
+    };
+
+    onMounted(fetchTrips);
 
     return {
-      offers
+      trips
     };
   },
-}
+};
 </script>

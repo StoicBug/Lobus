@@ -107,6 +107,11 @@ const routes = [
     component: () => import("../views/Circuit/Etape1.vue"),
   },
   {
+    path: "/circuit/etape3",
+    name: "circuit etape3",
+    component: () => import("../views/Circuit/Etape3.vue"),
+  },
+  {
     path: "/circuit/etape2",
     name: "circuit etape2",
     component: () => import("../views/Circuit/Etape2.vue"),
@@ -153,6 +158,10 @@ const routes = [
       {
         path: "accepted",
         component: ()=> import("../components/Particulier/AcceptedTable.vue"),
+      },
+      {
+        path: "declined",
+        component: ()=> import("../components/Particulier/DeclinedTable.vue"),
       },
     ],
   },

@@ -3,7 +3,7 @@
     <h1 class="text-2xl font-bold sm:text-3xl">Sign Up</h1>
 
     <p class="mt-4 text-gray-500">
-      Welocme to Lobus . The Place where you can choose the best plan for your trip !
+      Explorez Lobus, votre destination idéale pour trouver le plan parfait pour votre voyage !
     </p>
   </div>
   <form @submit.prevent="" novalidate="" class="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
@@ -84,13 +84,8 @@
             <input type="checkbox"  />
             <span class="slider round"></span>
           </label>
-          <input
-              type="submit"
-              class="text-white bg-primary px-6 py-3 rounded-md mx-3"
-              value="Submit"
-          />
           <button @click="createAccount">
-            Create Account
+            Créer un compte
           </button>
         </div>
       </div>

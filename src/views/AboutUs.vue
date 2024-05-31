@@ -6,7 +6,7 @@
 
       <div class="container">
         <div class="grid grid-cols-1 pb-8 text-center mt-10">
-          <h3 class="font-medium leading-normal text-3xl mt-10 text-white">Company Story</h3>
+          <h3 class="font-medium leading-normal text-3xl mt-10 text-white">À propos de nous</h3>
         </div><!--end grid-->
       </div><!--end container-->
 

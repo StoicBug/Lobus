@@ -26,7 +26,7 @@
 </li>
 
 <li class="flex-1">
-    <RouterLink to="qqs" class="relative block p-4" href="">
+    <RouterLink to="/particulier/declined" class="relative block p-4" href="">
         <div class="flex items-center justify-center gap-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-gray-500" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
@@ -34,24 +34,11 @@
                     d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
             </svg>
 
-            <span class="text-sm font-medium text-gray-900"> Historic </span>
+            <span class="text-sm font-medium text-gray-900"> Declined </span>
         </div>
     </RouterLink>
 </li>
 
-<li class="flex-1">
-    <RouterLink to="qsq" class="relative block p-4" href="">
-        <div class="flex items-center justify-center gap-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-gray-500" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-            </svg>
-
-            <span class="text-sm font-medium text-gray-900"> Settings </span>
-        </div>
-    </RouterLink>
-</li>
 </ul>
 </template>
 

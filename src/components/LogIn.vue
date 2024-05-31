@@ -3,8 +3,7 @@
     <div class="mx-auto max-w-lg text-center">
       <h1 class="text-2xl font-bold sm:text-3xl">J'ai déjà un compte</h1>
       <p class="mt-4 text-gray-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla
-        eaque error neque ipsa culpa autem, at itaque nostrum!
+        Explorez Lobus, votre destination idéale pour trouver le plan parfait pour votre voyage !
       </p>
     </div>
 
@@ -43,7 +42,7 @@
 
       <div class="flex items-center justify-between">
         <p class="text-sm text-gray-500">
-          <a class="underline" href="">Forgot password</a>
+          <a class="underline" href="">Mode de passe oublié</a>
 
 
         </p>

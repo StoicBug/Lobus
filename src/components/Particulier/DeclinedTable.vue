@@ -32,12 +32,12 @@
         <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ trip.dateeffect }}</td>
         <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ trip.drivername }}</td>
         <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ trip.price }}</td>
-        <td class="whitespace-nowrap px-4 py-2 text-blue-500  font-medium">{{ trip.status }}</td>
+        <td class="whitespace-nowrap px-4 py-2 text-red-600 font-medium">{{ trip.status }}</td>
         <td class="whitespace-nowrap px-4 py-2">
           <a href="#" class="inline-block rounded bg-secondary px-4 py-2 text-xs font-medium text-white">
             View Details
           </a>
-          <router-link to='/particulier/offers' class="inline-block rounded bg-primary px-4 py-2 text-xs font-medium text-white mx-2">
+          <router-link to='/particulier/offers/' class="inline-block rounded bg-primary px-4 py-2 text-xs font-medium text-white mx-2">
             Consult Offer
           </router-link>
         </td>
@@ -80,7 +80,8 @@ export default {
             drivername,
             dateeffect
           `)
-            .eq('userid', userId);
+            .eq('userid', userId)
+            .eq('status', 'Canceled');
 
         if (error) {
           console.error('Error fetching trips:', error.message);

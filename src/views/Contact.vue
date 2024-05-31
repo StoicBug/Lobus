@@ -6,7 +6,7 @@
 
       <div class="container">
         <div class="grid grid-cols-1 pb-8 text-center mt-10">
-          <h3 class="font-medium leading-normal text-3xl mt-10 text-white">Contact Us</h3>
+          <h3 class="font-medium leading-normal text-3xl mt-10 text-white">Prêt à nous contacter ?</h3>
         </div><!--end grid-->
       </div><!--end container-->
 

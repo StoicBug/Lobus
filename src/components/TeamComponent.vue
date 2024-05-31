@@ -2,10 +2,10 @@
   <div>
     <div class="container lg:mt-24 mt-16">
       <div class="grid grid-cols-1 pb-8 text-center">
-        <h3 class="mb-4 md:text-2xl text-xl font-medium">Meet Our Teammates</h3>
+        <h3 class="mb-4 md:text-2xl text-xl font-medium">Rencontrez nos équipe
+        </h3>
 
-        <p class="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome
-          template, you can replace it with any text.</p>
+        <p class="text-slate-400 max-w-xl mx-auto">Découvrez les visages derrière notre équipe. Rencontrez les membres qui font de notre projet une réalité.</p>
       </div>
 
       <div class="grid md:grid-cols-9  grid-cols-1 mt-8 gap-[80px]">
@@ -29,7 +29,10 @@
 
 <script>
 
-import box from '../assets/BoxModel.png'
+import zakariae from '../assets/images/zaka.jpg'
+import romi from '../assets/images/romi.jpg'
+import bachir from '../assets/images/bachir.jpg'
+
 export default {
 
   name: "TeamVue",
@@ -37,19 +40,19 @@ export default {
     return {
       TeamData: [
         {
-          image: box,
+          image: zakariae,
           name: 'Zakariae ABDOUNI',
-          position: 'Designer',
+          position: 'GLSID-2',
         },
         {
-          image: box,
+          image: romi,
           name: 'Romaysae',
-          position: 'Designer',
+          position: 'GLSID-2',
         },
         {
-          image: box,
+          image: bachir,
           name: 'El bachir',
-          position: 'Designer',
+          position: 'BDCC-2',
         }
       ]
     }

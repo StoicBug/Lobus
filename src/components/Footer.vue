@@ -18,7 +18,8 @@
                     <li class="ml-6">Contact</li>
                     <li class="ml-6">About</li>
                 </ul>
-                <p class="px-5 lg:w-9/12 text-center mx-auto py-5 font-normal"> LOBUS, is set to revolutionize the transportation sector by enabling users to quickly compare services and prices from multiple carriers. Within just a minute, users can submit their requests and receive several personalized offers. </p>
+                <p class="px-5 lg:w-9/12 text-center mx-auto py-5 font-normal"> LOBUS est sur le point de révolutionner le secteur des transports en permettant aux utilisateurs de comparer rapidement les services et les prix de plusieurs transporteurs. En une minute seulement, les utilisateurs peuvent soumettre leurs demandes et recevoir plusieurs offres personnalisées.
+                </p>
                 <p>© 2024 LOBUS | Powered by AJICOD</p>
             </div>
         </div>

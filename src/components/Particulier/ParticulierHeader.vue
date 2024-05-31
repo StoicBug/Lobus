@@ -30,7 +30,7 @@
                    class="h-10 w-10 rounded-full object-cover" />
               <!-- Profile Info -->
               <p class="ml-2 hidden text-left text-xs sm:block">
-                <strong class="block font-medium">{{ currentUser ? currentUser.name : 'Guest' }}</strong>
+                <strong class="block font-medium"></strong>
                 <span class="text-gray-500">{{ currentUser ? currentUser.email : 'Guest@gmail.com' }}</span>
               </p>
               <!-- Dropdown Icon -->
@@ -54,7 +54,7 @@
       <!-- Welcome Message -->
       <div class="mt-8">
         <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
-          Welcome Back, <span class="text-primary">{{ currentUser ? currentUser.name : 'Guest' }}</span>!
+          Welcome Back <span class="text-primary"></span>!
         </h1>
         <p class="mt-1.5 text-sm text-gray-500">
           You have 3 new offers. Keep it up! 🚀
@@ -63,14 +63,9 @@
     </div>
   </header>
 </template>
-
 <script setup>
 import { ref, onMounted } from 'vue';
 import { supabase } from '../../supabase';
-import NavBar from "../NavBar.vue";
-import StepsHeader from "../AllerSimple/StepsHeader.vue";
-import Footer from "../Footer.vue";
-import { useAllerSimple } from "../../stores/AllerSimple.js";
 
 const currentUser = ref(null);
 
@@ -92,6 +87,7 @@ onMounted(() => {
   checkUser();
 });
 
+
 // Logout function
 async function logOut() {
   const { error } = await supabase.auth.signOut();
@@ -104,7 +100,6 @@ async function logOut() {
   }
 }
 </script>
-
 <style scoped>
 .dropdown {
   position: relative;
