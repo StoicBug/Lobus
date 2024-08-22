@@ -1,56 +1,70 @@
-<template >
-    <div class="bg-landing-bg bg-no-repeat bg-cover bg-opacity-40" id="comment-macrh">
-
-    
-    <section class="container mx-auto pt-10" >
-        <div class="text-center">
-            <p class="text-primary">{{ $t('stepsIntroTitle') }}</p>
-            <h1 class="text-2xl font-semibold ">- {{ $t('stepsTitle') }} -</h1>
-            <p class="pt-4">
-                {{ $t('stepsSubtitle') }}
-            </p>
+<template>
+    <section class="bg-gradient-to-b from-white to-gray-100 py-16" id="comment-march">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <span class="text-primary text-sm font-semibold uppercase tracking-wide">{{ $t('stepsIntroTitle') }}</span>
+          <h2 class="text-3xl font-bold mt-2">{{ $t('stepsTitle') }}</h2>
+          <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+            {{ $t('stepsSubtitle') }}
+          </p>
         </div>
-        <div class="grid grid-cols-6 pt-10 gap-3">
-            <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-2">
-                <img class="w-full p-5" src="../assets/images/home/Envoyez_votre_demande.svg" alt="">
+  
+        <div class="space-y-24">
+          <!-- Step 1 -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0">
+              <div class="bg-white bg-landing-bg p-8 rounded-lg shadow-lg">
+                <img src="../assets/images/home/Envoyez_votre_demande.svg" alt="Step 1" class="w-full h-64 object-contain">
+              </div>
             </div>
-            <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-4 flex flex-col justify-center">
-                <h1 class="text-4xl font-semibold text-primary">01. <br /> {{ $t('stepsStep1Title') }} </h1>
-                <p class="mt-2">
-                    {{ $t('stepsStep1Content') }}
-                </p>
+            <div class="w-full md:w-1/2 md:pl-12">
+              <h3 class="text-3xl font-bold text-primary mb-4">
+                <span class="text-5xl block mb-2">01</span>
+                {{ $t('stepsStep1Title') }}
+              </h3>
+              <p class="text-gray-600 text-lg">{{ $t('stepsStep1Content') }}</p>
             </div>
+          </div>
+  
+          <!-- Step 2 -->
+          <div class="flex flex-col md:flex-row-reverse items-center">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0">
+              <div class="bg-white bg-landing-bg p-8 rounded-lg shadow-lg">
+                <img src="../assets/images/home/Comparez_les_prix_et_services.svg" alt="Step 2" class="w-full h-64 object-contain">
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 md:pr-12">
+              <h3 class="text-3xl font-bold text-primary mb-4">
+                <span class="text-5xl block mb-2">02</span>
+                {{ $t('stepsStep2Title') }}
+              </h3>
+              <p class="text-gray-600 text-lg">{{ $t('stepsStep2Content') }}</p>
+            </div>
+          </div>
+  
+          <!-- Step 3 -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0">
+              <div class="bg-white bg-landing-bg p-8 rounded-lg shadow-lg">
+                <img src="../assets/images/home/Choisissez_votre_transporteur.svg" alt="Step 3" class="w-full h-64 object-contain">
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 md:pl-12">
+              <h3 class="text-3xl font-bold text-primary mb-4">
+                <span class="text-5xl block mb-2">03</span>
+                {{ $t('stepsStep3Title') }}
+              </h3>
+              <p class="text-gray-600 text-lg">{{ $t('stepsStep3Content') }}</p>
+            </div>
+          </div>
         </div>
-        <div class="grid grid-cols-6 pt-10 gap-3">
-            <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-2 flex flex-col justify-center">
-                <h1 class="text-4xl font-semibold text-primary">02. <br /> {{ $t('stepsStep2Title') }}</h1>
-                <p class="mt-2">{{ $t('stepsStep2Content') }}</p>
-            </div>
-            <div class="col-span-4 row-start-1 col-start-2 md:col-span-2 md:col-start-4">
-                <img class="w-full p-5" src="../assets/images/home/Comparez_les_prix_et_services.svg" alt="">
-            </div>
-        </div>
-        <div class="grid grid-cols-6 pt-10 gap-3">
-            <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-2">
-                <img class="w-full p-5" src="../assets/images/home/Choisissez_votre_transporteur.svg" alt="">
-            </div>
-            <div class="col-span-4 col-start-2 md:col-span-2 md:col-start-4 flex flex-col justify-center">
-                <h1 class="text-4xl font-semibold text-primary">03. <br /> {{ $t('stepsStep3Title') }}</h1>
-                <p class="mt-2">{{ $t('stepsStep3Content') }}</p>
-            </div>
-        </div>
+      </div>
     </section>
-</div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-    }
+  </template>
+  
+  
+  <script>
+  export default {
+    name: 'StepsSection',
   }
-}
-</script>
-
-<style>
-</style>
+  </script>

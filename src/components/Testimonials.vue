@@ -1,5 +1,6 @@
 <template>
-  <div class="container mx-auto mb-36" id="testamonials">
+    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 py-10">
+      <div class="container mx-auto mb-36 " id="testamonials">
     <div class="text-center pt-10">
       <p class="text-primary">Your best choice</p>
       <h1 class="text-2xl font-semibold">
@@ -50,6 +51,7 @@
       </div>
     </div>
   </div>
+    </div>
 </template>
 
 <script>

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        'hero-pattern': "url('/src/assets/zelij.png')",
+        'hero-pattern': "linear-gradient(to right bottom, rgba(244,96,54,0.8), rgba(250,211,117,0.8)), url('/src/assets/texture.png')",
         'steps-bg': "url('/src/assets/bg-steps.png')",
 		'landing-bg': "url('/src/assets/landing-bg.png')",
 
