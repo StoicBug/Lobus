@@ -19,4 +19,4 @@ export default {
 
 <style scoped>
 
-</style>../components/LogIn.vue
+</style>

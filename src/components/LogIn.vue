@@ -46,17 +46,9 @@
       <div class="flex items-center justify-between">
         <p class="text-sm text-gray-500">
           <a class="underline" href="">Forgot password</a>
-          <button ><RouterLink to="/signup">Sign Up</RouterLink></button>
+          <button class="ml-6"><RouterLink to="/signup">Sign Up</RouterLink></button>
         </p>
-
-        <button ><RouterLink to="/particulier">LogIn</RouterLink></button>
-        <input
-            type="submit"
-            class="text-white bg-primary px-6 py-3 rounded-md mx-3"
-            value="Send magic link"
-        />
-        <button class="py-2 px-4 bg-red-400" @click.prevent="seeCurrentUser">SEE USER</button>
-        <button class="py-2 px-4 bg-red-400" @click.prevent="logOut">LOG OUT</button>
+        <button class="text-white bg-primary px-6 py-3 rounded-md mx-3" ><RouterLink to="/particulier">LogIn</RouterLink></button>
       </div>
     </form>
   </div>

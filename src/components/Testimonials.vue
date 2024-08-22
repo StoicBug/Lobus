@@ -37,14 +37,11 @@
           class="absolute -top-4 -left-5"
         />
         <p class="mt-5 px-2">
-          "The ease of use and integration of our client management is more
-          streamlined. I also love that the developers are constantly making
-          fantastic changes to the features and listen to my advice and
-          questions about what will help us do our jobs better."
+          "C'est un avantage appréciable de pouvoir consulter toutes les caractéristiques du bus et son évaluation sur le site avant de le réserver."
         </p>
         <img src="../assets/stars.png" alt="" class="mt-8" />
-        <h3 class="font-medium text-secondary">Mohamed Amine</h3>
-        <p>Owner</p>
+        <h3 class="font-medium text-secondary">Jamal Jain</h3>
+        <p>Agence de voyage</p>
         <img
           src="../assets/back-quote-right.png"
           alt=""
