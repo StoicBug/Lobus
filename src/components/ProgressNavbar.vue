@@ -1,15 +1,15 @@
 <template>
-  <nav class="sticky top-1/2 transform -translate-y-1/2 h-16 right-0 hidden lg:block z-50">
-    <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-l-lg shadow-lg p-4 max-w-[200px]">
-      <ul class="space-y-2">
+  <nav class="sticky top-1/2 transform -translate-y-1/2 h-12 right-0 hidden lg:block z-50">
+    <div class="bg-white bg-opacity-80 backdrop-blur-md rounded-lg shadow-md p-2 max-w-[150px]">
+      <ul class="space-y-1">
         <li v-for="(item, index) in navItems" :key="index">
           <a :href="item.href" 
-             class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
-             :class="{ 'bg-blue-100 text-blue-600': activeSection === item.href }"
+             class="block py-1 px-3 rounded-md transition-all duration-200 hover:bg-blue-200 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+             :class="{ 'bg-blue-200 text-blue-700': activeSection === item.href }"
              @click="setActiveSection(item.href)">
             <div class="flex items-center">
-              <component :is="item.icon" class="w-5 h-5 mr-2" />
-              <span>{{ item.text }}</span>
+              <component :is="item.icon" class="w-4 h-4 mr-1" />
+              <span class="text-sm">{{ item.text }}</span>
             </div>
           </a>
         </li>
